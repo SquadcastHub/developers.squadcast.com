@@ -12,9 +12,7 @@ const products = [
 
   "api",
   "terraform",
-  "incoming-webhooks",
-  "outgoing-webhooks",
-  "webhook-connectors",
+
 ]
 
 const productIcons = {}
@@ -132,9 +130,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "GTM-PKQFGQB",
-        dataLayerName: "cfDataLayer",
-        selfHostedOrigin: "https://tr.www.cloudflare.com"
+        id: "",
+        dataLayerName: "",
+        selfHostedOrigin: ""
       },
     },
     // Consider enabling for PWA + offline functionality
