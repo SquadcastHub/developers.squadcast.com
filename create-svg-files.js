@@ -1,4 +1,4 @@
-const {products} = require('./developers.cloudflare.com/current-products-list')
+const {products} = require('./developers.squadcast.com/current-products-list')
 const fs = require("fs");
 const path = require("path");
 
