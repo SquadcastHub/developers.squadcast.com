@@ -12,6 +12,9 @@ const products = [
 
   "api",
   "terraform",
+  // "incoming-webhooks",
+  // "outgoing-webhooks",
+  // "webhook-connectors",
 
 ]
 
@@ -127,14 +130,14 @@ module.exports = {
         icon: "src/images/squadcast-icon.png"
       }
     },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "",
-        dataLayerName: "",
-        selfHostedOrigin: ""
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-tagmanager",
+    //   options: {
+    //     id: "",
+    //     dataLayerName: "",
+    //     selfHostedOrigin: ""
+    //   },
+    // },
     // Consider enabling for PWA + offline functionality
     // https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
