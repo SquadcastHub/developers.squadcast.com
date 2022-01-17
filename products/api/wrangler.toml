@@ -1,0 +1,13 @@
+name = "api"
+type = "webpack"
+workers_dev = true
+account_id = "19cf6826c19fdd5e3fa2d71928122959" # developers.squadcast.workers.dev
+
+[env.production]
+workers_dev = true
+account_id = "19cf6826c19fdd5e3fa2d71928122959" # developers.squadcast.workers.dev
+route = "https://developers.squadcast.workers.dev/api*"
+
+[site]
+bucket = ".docs/public/"
+entry-point = ".docs/workers-site"
