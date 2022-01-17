@@ -9,35 +9,12 @@ const getProduct = (name) => {
 }
 
 const products = [
-  "1.1.1.1",
-  "analytics",
+
   "api",
-  "byoip",
-  "cloudflare-for-teams",
-  "cloudflare-one",
-  "distributed-web",
-  "docs-engine",
-  "events",
-  "firewall",
-  "fundamentals",
-  "http3",
-  "images",
-  "load-balancing",
-  "logs",
-  "magic-transit",
-  "network-interconnect",
-  "railgun",
-  "randomness-beacon",
-  "registrar",
-  "spectrum",
-  "ssl",
-  "stream",
-  "tenant",
   "terraform",
-  "time-services",
-  "waf",
-  "warp-client",
-  "workers",
+  "incoming-webhooks",
+  "outgoing-webhooks",
+  "webhook-connectors",
 ]
 
 const productIcons = {}
