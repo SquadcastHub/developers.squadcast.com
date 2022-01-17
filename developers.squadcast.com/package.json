@@ -1,9 +1,9 @@
 {
-  "name": "developers.cloudflare.com",
+  "name": "developers.squadcast.com",
   "private": true,
-  "description": "Cloudflare Developers",
+  "description": "Squadcast Developers",
   "version": "0.1.0",
-  "author": "Cloudflare <github@cloudflare.com>",
+  "author": "Squadcast <support@squadcast.com>",
   "dependencies": {
     "@adaptivelink/pops": "0.3.3",
     "@cloudflare/cloudflare-brand-assets": "4.7.7",
@@ -52,7 +52,7 @@
     "set-interval-visible": "2.0.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=12.18.0"
   },
   "devDependencies": {
     "eslint-config-react-app": "5.2.1",
