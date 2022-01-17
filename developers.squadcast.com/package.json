@@ -52,7 +52,7 @@
     "set-interval-visible": "2.0.0"
   },
   "engines": {
-    "node": ">=12.18.0"
+    "node": ">=12.20"
   },
   "devDependencies": {
     "eslint-config-react-app": "5.2.1",
