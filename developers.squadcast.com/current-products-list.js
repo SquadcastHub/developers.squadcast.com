@@ -6,29 +6,29 @@ const products = [
     href: "https://apidocs.squadcast.com/",
     icon: "api",
   },
-  {
-    title: "Incoming Webhooks",
-    href: "https://support.squadcast.com/docs/apiv2",
-    icon: "incoming-webhooks",
-    wrap: true,
-  },
-  {
-    title: "Outgoing Webhooks",
-    href: "https://support.squadcast.com/docs/outgoing-webhooks",
-    icon: "outgoing-webhooks",
-    wrap: true,
-  },
+  // {
+  //   title: "Incoming Webhooks",
+  //   href: "https://support.squadcast.com/docs/apiv2",
+  //   icon: "incoming-webhooks",
+  //   wrap: true,
+  // },
+  // {
+  //   title: "Outgoing Webhooks",
+  //   href: "https://support.squadcast.com/docs/outgoing-webhooks",
+  //   icon: "outgoing-webhooks",
+  //   wrap: true,
+  // },
   {
     title: "Terraform Provider",
     href: "https://support.squadcast.com/docs/terraform-provider-for-squadcast",
     icon: "terraform", 
   },
-  {
-    title: "Webhooks Connectors",
-    href: "https://github.com/SquadcastHub/Squadcast-Webhook-Connectors",
-    icon: "webhook-connectors",
-    wrap: true,
-  },
+  // {
+  //   title: "Webhooks Connectors",
+  //   href: "https://github.com/SquadcastHub/Squadcast-Webhook-Connectors",
+  //   icon: "webhook-connectors",
+  //   wrap: true,
+  // },
   // {
   //   title: "BYOIP",
   //   path: "byoip",
