@@ -42,6 +42,8 @@ const DocsPage = ({ pageContext: page, children, location }) => {
     <>
       <SEO title={title} pcxContentType={pcxContentType} />
 
+      {pcxContentType === "landing-page" ? <link rel="stylesheet" href="../css/docs/components/landing.css"/> : ''}
+
       <Helmet>
         <html is-docs-page="" {...disableSearchProps} />
         <script

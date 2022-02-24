@@ -1,0 +1,16 @@
+.DocsSidebar, .DocsBody--sidebar{
+    display: none;
+}
+.DocsToolbar{
+    position: static;
+}
+.DocsBody{
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.DocsContent{
+    width: 100%;
+}
+.DocsFooter{
+    margin-left: 0px;
+}
