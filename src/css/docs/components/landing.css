@@ -1,4 +1,4 @@
-.DocsSidebar, .DocsBody--sidebar{
+.DocsSidebar, .DocsBody--sidebar, #se1{
     display: none;
 }
 .DocsToolbar{
@@ -9,8 +9,32 @@
     padding-right: 64px;
 }
 .DocsContent{
-    width: 100%;
+    width: 100% !important;
 }
 .DocsFooter{
     margin-left: 0px;
+}
+#se{
+    visibility: visible !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+[theme="dark"] .DocsMarkdown--link{
+    color: white;
+}
+[theme="dark"] .boxed-card{
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    display: block;
+    margin-right: 20px;
+}
+[theme="light"] .boxed-card{
+    padding: 20px;
+    border: 1px solid #3670fe;
+    border-radius: 4px;
+    display: block;
+    margin-right: 20px;
 }

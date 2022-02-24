@@ -6,14 +6,18 @@ import DocsTitle from "./docs-title"
 import DocsSearch from "./docs-search"
 import AccessibleSVG from "./accessible-svg"
 import ThemeToggle from "./theme-toggle"
+import SquadcastLogo from "./squadcast-logo"
 
 const DocsToolbar = () => {
   const { contentRepo }  = getCloudflareDocsConfig()
 
   return (
     <div className="DocsToolbar">
-      <div className="DocsToolbar--search">
+      <div className="DocsToolbar--search" id="se1">
         <DocsSearch/>
+      </div>
+      <div className="DocsToolbar--search" id="se" style={{ visibility: 'hidden' }}>
+        <a href="https://www.squadcast.com"><div style={{ width: "60%" }}><SquadcastLogo/></div></a>
       </div>
 
       <div className="DocsToolbar--tools">
