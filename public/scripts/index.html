@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" theme="light" is-docs-page js-focus-visible-polyfill-available>
+  <head><meta charset="utf-8">
+<title>Scripts · Scripts</title>
+<meta http-equiv="cleartype" content="on"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="application-name" content="Scripts · Scripts"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-title" content="Scripts · Scripts"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#f38020"/>
+
+<meta name="description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it." />
+
+<meta property="og:image" content="https://squadcast-devoloper-portalx.pages.dev/cf-twitter-card.png"/>
+<meta property="og:title" content="Scripts · Scripts"/>
+<meta property="og:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta property="og:type" content="website"/>
+
+<meta name="twitter:title" content="Scripts · Scripts"/>
+<meta name="twitter:image" content="https://squadcast-devoloper-portalx.pages.dev/cf-twitter-card.png"/>
+<meta name="twitter:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta name="twitter:creator" content="@SquadcastHub"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="icon" href="/favicon-32x32.png"/>
+<link rel="canonical" href="https://squadcast-devoloper-portalx.pages.dev/scripts/"/>
+<link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+
+<link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/>
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
+<link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
+<link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><script src="/search.redirect.min.fc262af9a6d0e2c5e49ad9c520f03c9b.js" defer></script><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
+    <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
+    <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
+  </head>
+  <body>
+  <div class="DocsPage"><div class="DocsMobileHeader">
+  <a class="DocsMobileHeader--cloudflare-logo-link Link Link-without-underline" href="/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo" style="width: 10%;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_);}
+</style>
+<g id="Group-Copy">
+	
+		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
+		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
+		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
+	
+		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
+		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
+		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
+</g>
+
+</div>
+<span class="DocsNavLogoLockup--text">
+  <span data-text="Squadcast">Squadcast </span>
+  <span data-text="Docs">Docs </span>
+</span>
+    </div>
+  </a>
+</div>
+
+<div class="DocsMobileTitleHeader">
+  <a aria-current="page" class="DocsMobileTitleHeader--logo-link Link Link-without-underline" href="/scripts/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo">
+        <span title="Squadcast Scripts logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M8.33,7.92a1,1,0,0,0-1.39-.29l-4.54,3a1.51,1.51,0,0,0,0,2.76l4.54,3A1,1,0,1,0,8,14.7L3.94,12,8,9.3A1,1,0,0,0,8.33,7.92Z"/><path class="cls-1" d="M21.5,10.62,17,7.63a1,1,0,0,0-1.39.29,1,1,0,0,0,.29,1.38L20,12l-4.1,2.7a1,1,0,0,0-.29,1.38,1,1,0,0,0,.84.45,1,1,0,0,0,.55-.16l4.54-3a1.51,1.51,0,0,0,0-2.76Z"/><path class="cls-1" d="M13.77,2a1,1,0,0,0-1.16.81L9.42,20.86A1,1,0,0,0,10.23,22h.18a1,1,0,0,0,1-.82L14.58,3.14A1,1,0,0,0,13.77,2Z"/></svg></span>
+      </div>
+
+      <span class="DocsNavLogoLockup--text">
+        <span class="DocsSidebar--docs-title-text-scaler" style="--length:7">Scripts</span>
+      </span>
+    </div>
+  </a>
+
+  <button class="Button DocsMobileTitleHeader--sidebar-toggle-button">
+    <span class="DocsMobileTitleHeader--sidebar-toggle-button-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-1332672649688018"
+        xmlns="http://www.w3.org/2000/svg">
+        <title id="title-1332672649688018">Navigation menu icon</title>
+        <path data-index="1" d="M5, 7h10" transform-origin="10  7"></path>
+        <path data-index="2" d="M5,10h10" transform-origin="10 10"></path>
+        <path data-index="3" d="M5,13h10" transform-origin="10 13"></path>
+      </svg>
+      <span is-visually-hidden="">Open external link</span>
+    </span>
+  </button>
+</div>
+
+<div class="DocsMobileNavBackdrop"></div><div class="DocsSidebar">
+  <div class="DocsSidebar--sections">
+    <div class="DocsSidebar--section DocsSidebar--header-section">
+      <a class="DocsSidebar--cloudflare-logo-link DocsSidebar--link" href="/">
+        <div class="DocsNavLogoLockup">
+          <div class="DocsNavLogoLockup--logo" style="width: 10%;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_);}
+</style>
+<g id="Group-Copy">
+	
+		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
+		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
+		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
+	
+		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
+		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
+		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
+</g>
+
+</div>
+<span class="DocsNavLogoLockup--text">
+  <span data-text="Squadcast">Squadcast </span>
+  <span data-text="Docs">Docs </span>
+</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="DocsSidebar--section-separator"></div>
+
+    <div class="DocsSidebar--section DocsSidebar--docs-title-section">
+      <a aria-current="page" class="DocsSidebar--docs-title-logo-link DocsSidebar--link" href="/scripts/">
+        <div class="DocsNavLogoLockup">
+          <div class="DocsNavLogoLockup--logo">
+            <span title="Squadcast Scripts logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M8.33,7.92a1,1,0,0,0-1.39-.29l-4.54,3a1.51,1.51,0,0,0,0,2.76l4.54,3A1,1,0,1,0,8,14.7L3.94,12,8,9.3A1,1,0,0,0,8.33,7.92Z"/><path class="cls-1" d="M21.5,10.62,17,7.63a1,1,0,0,0-1.39.29,1,1,0,0,0,.29,1.38L20,12l-4.1,2.7a1,1,0,0,0-.29,1.38,1,1,0,0,0,.84.45,1,1,0,0,0,.55-.16l4.54-3a1.51,1.51,0,0,0,0-2.76Z"/><path class="cls-1" d="M13.77,2a1,1,0,0,0-1.16.81L9.42,20.86A1,1,0,0,0,10.23,22h.18a1,1,0,0,0,1-.82L14.58,3.14A1,1,0,0,0,13.77,2Z"/></svg></span>
+          </div>
+
+          <span class="DocsNavLogoLockup--text">
+            <span class="DocsSidebar--docs-title-text-scaler" style="--length:7">Scripts</span>
+          </span>
+        </div>
+      </a>
+
+      <div class="DocsSidebar--section-more Dropdown" data-expanded="false">
+        <button class="DocsSidebar--section-more-button Button" aria-expanded="false">
+          <div class="DocsSidebar--section-more-button-icon">
+            <svg viewBox="0 0 4 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" fill="currentColor" role="img" aria-labelledby="title-6032186738345315"
+              xmlns="http://www.w3.org/2000/svg">
+              <title id="title-6032186738345315">Dropdown icon</title>
+              <path d="M2,2v0m0,6v0m0,6v0z"></path>
+            </svg>
+            <span is-visually-hidden>Scripts menu</span>
+          </div>
+        </button>
+
+        <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
+          <ul class="Dropdown--list"><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://api.cloudflare.com/" tabindex="-1">Full API docs</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://cloudflare.com" tabindex="-1">Cloudflare homepage</a>
+              </li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="DocsSidebar--section DocsSidebar--nav-section" style="position:relative;overflow:hidden;width:100%;height:100%">
+      <div style="position: absolute; inset: 0px; overflow-y: auto; margin-right: 0px; margin-bottom: 0px;">
+        <div class="DocsSidebar--nav-section-shadow" style="opacity: 0;"></div>
+
+        <ul class="DocsSidebar--nav">
+          
+          <li class="DocsSidebar--nav-item" is-active>
+            <a aria-current="page" class="DocsSidebar--nav-link" is-active href="/scripts/">
+              <span class="DocsSidebar--nav-link-highlight"></span>
+              <span class="DocsSidebar--nav-link-text">Overview</span>
+            </a>
+          </li></ul>
+      </div>
+      <div style="position:absolute;height:6px;display:none;right:2px;bottom:2px;left:2px;border-radius:3px">
+        <div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div>
+      </div>
+      <div style="position:absolute;width:6px;display:none" class="Scrollbars--track Scrollbars--track-vertical">
+        <div style="position:relative;display:block;width:100%" class="Scrollbars--thumb Scrollbars--thumb-vertical"></div>
+      </div>
+    </div>
+  </div>
+  <div class="DocsSidebar--shadow"></div>
+</div><div class="DocsToolbar"><div class="DocsToolbar--search CoveoSearchInterface">
+  <div class="DocsSearch">
+    <div class="DocsSearch--input-wrapper">
+      
+
+      <div class="DocsSearch--input-icon">
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+<div class="DocsToolbar--tools">
+  
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--tools-icon-item">
+    <div class="Tooltip---root">
+      <div class="DocsToolbar--tools-icon-item-content">
+        <a class="Link Link-without-underline" href="https://github.com/SquadcastHub/developers.squadcast.com">
+          <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6991762763429039" xmlns="http://www.w3.org/2000/svg">
+            <title id="title-6991762763429039">GitHub icon</title>
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+
+      <span class="Tooltip" role="tooltip" position="bottom-end">
+        Visit Scripts on GitHub
+      </span>
+    </div>
+  </div>
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--theme-toggle"><div class="Tooltip---root">
+  <div class="ThemeToggle">
+    <input type="checkbox" id="ThemeToggle" class="ThemeToggle--input">
+
+    <label class="ThemeToggle--toggle" for="ThemeToggle">
+      <div class="ThemeToggle--toggle-handle"></div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--sun">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-8812071124069258" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-8812071124069258">Light theme icon (depiction of a sun)</title>
+          <path d="M7.5 11.465a3.482 3.482 0 01-1.596-.662L4.11 12.596a.5.5 0 01-.707-.707l1.793-1.793A3.482 3.482 0 014.535 8.5H2a.5.5 0 010-1h2.535a3.482 3.482 0 01.662-1.596L3.404 4.11a.5.5 0 01.707-.707l1.793 1.793A3.482 3.482 0 017.5 4.535V2a.5.5 0 011 0v2.535a3.482 3.482 0 011.596.662l1.793-1.793a.5.5 0 01.707.707l-1.793 1.793c.343.458.577 1.003.662 1.596H14a.5.5 0 110 1h-2.535a3.482 3.482 0 01-.662 1.596l1.793 1.793a.5.5 0 01-.707.707l-1.793-1.793a3.482 3.482 0 01-1.596.662V14a.5.5 0 11-1 0v-2.535z"></path>
+        </svg>
+      </div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--moon">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-5971296394189265" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-5971296394189265">Dark theme icon (depiction of a moon)</title>
+          <path d="M7.067 3.087a5 5 0 005.466 7.026 5 5 0 11-5.466-7.026z"></path>
+        </svg>
+      </div>
+    </label>
+
+    <span class="Tooltip" role="tooltip" position="bottom-end">Set theme to dark (⇧+D)</span>
+  </div>
+</div></div>
+</div></div>
+
+    <main class="DocsBody">
+      <div class="DocsBody--sidebar" with-styled-webkit-scrollbars="">
+  <div class="DocsBody--sidebar-content-scroll-fade"></div>
+  <div class="DocsBody--sidebar-content">
+      <ul class="DocsTableOfContents" hidden>
+        <li><a class="DocsTableOfContents-link" href="#docs-content">↑ Top</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+      <div id="docs-content" data-reach-skip-nav-content></div>
+
+      <div class="DocsContent" page-type="document">
+        <article class="DocsMarkdown">
+  <h1 id="scripts">Scripts</h1><p>We have documented a few scripts that are often asked &amp; used by our users to achieve certain things.</p>
+</article>
+      </div>
+    </main>
+
+    <footer class="DocsFooter">
+  <div class="DocsFooter--content">
+    <div>
+      <span class="DocsFooter--edit-on-gh-link-wrapper"><a href="https://github.com/SquadcastHub/developer.squadcast.com/blob/production/content/scripts/_index.md" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Edit on GitHub</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></span>
+
+      <span class="DocsFooter--content-dot-spacer">
+        &nbsp; · &nbsp;
+      </span>
+
+      <span class="DocsFooter--content-time">
+        Updated <time
+  class="relative"
+  datetime=2022-06-26T17:38:06&#43;05:30
+  title=2022-06-26
+>June 26, 2022</time>
+      </span>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

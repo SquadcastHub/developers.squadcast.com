@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quickstart on Squadcast Developers</title>
+    <link>https://squadcast-devoloper-portalx.pages.dev/build-integrations/</link>
+    <description>Recent content in Quickstart on Squadcast Developers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/build-integrations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build Alert Sources</title>
+      <link>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</guid>
+      <description>Build Alert SourcesSquadcast supports over 100+ integrations with a range of observability tools in the market today as alert sources.
+Squadcast now offers a platform for its users to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
+Through this platform, users can easily build integrations, document it and contribute to help the other users of our growing community.
+Integrations are built using Webhooks.</description>
+    </item>
+    
+  </channel>
+</rss>

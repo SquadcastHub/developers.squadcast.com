@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quickstart on Squadcast Developers</title>
+    <link>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/</link>
+    <description>Recent content in Quickstart on Squadcast Developers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Payload format</title>
+      <link>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/payload-format/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/payload-format/</guid>
+      <description>&amp;#8203;​ Header Ensure that you add a header Content-Type with value application/json while making the HTTP POST request.
+Content-Type:application/json
+&amp;#8203;​ Payload The body of the POST request should contain the details of your incident in the following format:
+{ &amp;#34;message&amp;#34;: &amp;#34;This will be the incident message&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;This will be the incident description&amp;#34;, &amp;#34;tags&amp;#34; : { &amp;#34;tagname1&amp;#34;:&amp;#34;Tag value#1&amp;#34;, &amp;#34;tagname2&amp;#34;:&amp;#34;Tag value#2&amp;#34;, &amp;#34;tagname3&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;Valid HTML HEX Colour Notation goes here&amp;#34;, &amp;#34;value&amp;#34;:&amp;#34;Tag value#3&amp;#34; } }, &amp;#34;status&amp;#34;: &amp;#34;trigger&amp;#34;, &amp;#34;event_id&amp;#34;: &amp;#34;6&amp;#34; } &amp;#8203;​ Mandatory fields within the JSON Kindly note that the message and description fields in the JSON are mandatory to trigger an incident in Squadcast.</description>
+    </item>
+    
+    <item>
+      <title>Use cases</title>
+      <link>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/</guid>
+      <description>Use-cases for incoming webhooksYou can use our incoming webhooks to do a lot of things, you are only limited by your imagination. Some of the most common use cases are listed below.
+Route alerts from observability tools Route alerts from internal tools Capture issues via a webform from internal or external stakeholders and route it to a service using incoming webhooks. If you use our incoming webhooks for some other use cases, please let us know and we will be happy to update it here.</description>
+    </item>
+    
+  </channel>
+</rss>

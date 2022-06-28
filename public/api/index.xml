@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quickstart on Squadcast Developers</title>
+    <link>https://squadcast-devoloper-portalx.pages.dev/api/</link>
+    <description>Recent content in Quickstart on Squadcast Developers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API documentation</title>
+      <link>https://squadcast-devoloper-portalx.pages.dev/api/documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://squadcast-devoloper-portalx.pages.dev/api/documentation/</guid>
+      <description>API documentationGo to apidocs.squadcast.com External link icon Open external link for documentation of all of Squadcast&amp;rsquo;s API endpoints.</description>
+    </item>
+    
+  </channel>
+</rss>

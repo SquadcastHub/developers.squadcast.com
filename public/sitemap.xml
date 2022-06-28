@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/api/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/build-integrations/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/scripts/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/terraform/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/api/documentation/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/cloudflare-worker/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/nodejs/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/payload-format/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/payload-format/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/use-cases/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/search/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://squadcast-devoloper-portalx.pages.dev/</loc>
+      <lastmod>2022-06-26T17:38:06+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  </urlset>

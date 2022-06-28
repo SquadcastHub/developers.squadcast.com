@@ -1,1 +1,356 @@
-<!DOCTYPE html><html theme="light"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="note" content="environment=development"/><title data-react-helmet="true"></title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="/favicon-32x32.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#f38020"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a4d0d7a42ef65947e6c07fb2a20181c5"/><script src="/socket.io/socket.io.js"></script></head><body><noscript id="gatsby-noscript" class="DocsNoscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"></div><script src="/polyfill.js" nomodule=""></script><script src="/commons.js"></script></body></html>
+<!doctype html>
+<html lang="en" theme="light" is-site-page is-docs-page>
+  <head><meta charset="utf-8">
+<title>Squadcast Developers · %!s(&lt;nil&gt;)</title>
+<meta http-equiv="cleartype" content="on"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="application-name" content="Squadcast Developers · %!s(&lt;nil&gt;)"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-title" content="Squadcast Developers · %!s(&lt;nil&gt;)"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#f38020"/>
+
+<meta name="description" content="Browse the latest developer documentation including API reference, articles, and sample code." />
+
+<meta property="og:image" content="https://squadcast-devoloper-portalx.pages.dev/"/>
+<meta property="og:title" content="Squadcast Developers · %!s(&lt;nil&gt;)"/>
+<meta property="og:description" content="Browse the latest developer documentation including API reference, articles, and sample code."/>
+<meta property="og:type" content="website"/>
+
+<meta name="twitter:title" content="Squadcast Developers · %!s(&lt;nil&gt;)"/>
+<meta name="twitter:image" content="https://squadcast-devoloper-portalx.pages.dev/"/>
+<meta name="twitter:description" content="Browse the latest developer documentation including API reference, articles, and sample code."/>
+<meta name="twitter:creator" content=""/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="icon" href="/favicon-32x32.png"/>
+<link rel="canonical" href="https://squadcast-devoloper-portalx.pages.dev/"/>
+<link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+
+<link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/>
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
+<link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
+<link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><script src="/search.redirect.min.fc262af9a6d0e2c5e49ad9c520f03c9b.js" defer></script><link rel="stylesheet" href="/home.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/home.min.80873b1a9f19bc456e7ca1e8c3a4748a.js" defer></script></head>
+  <body>
+    <div class="DocsPage">
+      <div class="SiteHeader">
+        <div class="SiteHeader--logo-section">
+          <a aria-current="page" class="SiteHeader--cloudflare-logo-link Link Link-without-underline" href="/">
+            <div class="DocsNavLogoLockup"><div class="DocsNavLogoLockup--logo" style="width: 10%;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_);}
+</style>
+<g id="Group-Copy">
+	
+		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
+		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
+		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
+	
+		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1"/>
+		<stop  offset="1" style="stop-color:#000395"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
+		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
+		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
+</g>
+
+</div>
+<span class="DocsNavLogoLockup--text">
+  <span data-text="Squadcast">Squadcast </span>
+  <span data-text="Docs">Developers </span>
+</span></div>
+          </a>
+        </div>
+
+        <div class="SiteHeader--search CoveoSearchInterface">
+          <div class="SiteSearch">
+            <div class="SiteSearch--input-wrapper">
+              
+
+              <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+
+              <div class="SiteSearch--input-icon">
+                
+              </div>
+
+              <span class="algolia-autocomplete" style="position: absolute; z-index: 100; display: none; direction: ltr;">
+                <span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="display: block; left: 0px; right: auto;">
+                  <div class="ds-dataset-1"></div>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="SiteHeader--nav">
+          <a class="SiteHeader--nav-link" href="https://support.squadcast.com"><span>Support Docs</span></a>
+          <a class="SiteHeader--nav-link" href="https://www.squadcast.com/blog"><span>Blog</span></a>
+          <a class="SiteHeader--nav-link" href="https://www.squadcast.com/case-studies"><span>Case Studies</span></a>
+          <a class="SiteHeader--nav-link" href="https://www.squadcast.com/events"><span>Events</span></a>
+          <a class="SiteHeader--nav-link" href="https://headwayapp.co/squadcast-updates"><span>Changelog</span></a>
+          <a class="SiteHeader--nav-link" href="https://www.squadcast.com/register"><span>Try Squadcast for free</span></a>
+          
+        </div>
+
+        <div class="SiteHeader--theme-toggle"><div class="Tooltip---root">
+  <div class="ThemeToggle">
+    <input type="checkbox" id="ThemeToggle" class="ThemeToggle--input">
+
+    <label class="ThemeToggle--toggle" for="ThemeToggle">
+      <div class="ThemeToggle--toggle-handle"></div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--sun">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-8812071124069258" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-8812071124069258">Light theme icon (depiction of a sun)</title>
+          <path d="M7.5 11.465a3.482 3.482 0 01-1.596-.662L4.11 12.596a.5.5 0 01-.707-.707l1.793-1.793A3.482 3.482 0 014.535 8.5H2a.5.5 0 010-1h2.535a3.482 3.482 0 01.662-1.596L3.404 4.11a.5.5 0 01.707-.707l1.793 1.793A3.482 3.482 0 017.5 4.535V2a.5.5 0 011 0v2.535a3.482 3.482 0 011.596.662l1.793-1.793a.5.5 0 01.707.707l-1.793 1.793c.343.458.577 1.003.662 1.596H14a.5.5 0 110 1h-2.535a3.482 3.482 0 01-.662 1.596l1.793 1.793a.5.5 0 01-.707.707l-1.793-1.793a3.482 3.482 0 01-1.596.662V14a.5.5 0 11-1 0v-2.535z"></path>
+        </svg>
+      </div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--moon">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-5971296394189265" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-5971296394189265">Dark theme icon (depiction of a moon)</title>
+          <path d="M7.067 3.087a5 5 0 005.466 7.026 5 5 0 11-5.466-7.026z"></path>
+        </svg>
+      </div>
+    </label>
+
+    <span class="Tooltip" role="tooltip" position="bottom-end">Set theme to dark (⇧+D)</span>
+  </div>
+</div></div>
+      </div>
+
+      <div class="SiteHeader---shadow"></div>
+      <div class="SiteHeader---shadow-cover"></div>
+
+      <main class="DocsBody">
+        <div id="docs-content" data-reach-skip-nav-content></div>
+        <div class="DocsContent" page-type="developers-site">
+          <article class="DocsMarkdown"><div class="Stripe">
+  <div class="Stripe--content">
+    <h1 id="your-imagination-Squadcast's-infrastructure">Your imagination, Squadcast's infrastructure</h1>
+    <p>Use Squadcast API and other developer resources to build cool stuff.</p>
+  </div>
+</div>
+
+
+<style>
+  .ProductGrid--content {
+    --n: 1;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(var(--n), 1fr);
+  }
+
+  @media screen and (min-width: 600px) {
+    .ProductGrid--content { --n: 2 }
+  }
+
+  @media screen and (min-width: 978px) {
+    .ProductGrid--content { --n: 3 }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .ProductGrid--content { --n: 4 }
+  }
+</style>
+
+<div class="ProductGrid">
+	<div class="ProductGrid--content"><a class="ProductGrid--link" data-wrap-title="false" href="/api/">
+        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M40.5 6h-33L6 7.5v33L7.5 42h33l1.5-1.5v-33L40.5 6ZM39 39H9V9h30v30Z"/><path d="M13.966 27.375h4.162L18.982 30h2.61l-3.974-11.526h-3.14L10.5 30h2.611l.855-2.625Zm2.038-6.264h.09l1.416 4.362h-2.925l1.42-4.362ZM25.26 26.263h2.047a4.839 4.839 0 0 0 2.266-.49c.601-.304 1.1-.78 1.432-1.367a4.05 4.05 0 0 0 .495-2.025 4.134 4.134 0 0 0-.487-2.03 3.433 3.433 0 0 0-1.409-1.376 4.638 4.638 0 0 0-2.235-.499h-4.547V30h2.437v-3.737Zm0-5.797h1.642c.404-.015.805.067 1.171.24.294.146.535.38.69.67a2.333 2.333 0 0 1 0 2.008c-.154.293-.394.53-.688.681a2.45 2.45 0 0 1-1.162.245h-1.65l-.004-3.844ZM36 18.474h-2.437V30H36V18.474Z"/></svg></div>
+        <span>API</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/incoming-webhooks/">
+        <div><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M21.25,3.84H16.77l1.79-1.79H16.4L13.86,4.59,16.4,7.14h2.16l-1.79-1.8h4.48a.75.75,0,0,0,0-1.5Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></div>
+        <span>Incoming Webhooks</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/outgoing-webhooks/">
+        <div><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M19.46,2.11H17.3l1.79,1.8H14.61a.75.75,0,0,0,0,1.5h4.48L17.3,7.2h2.16L22,4.66Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></div>
+        <span>Outgoing Webhooks</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/webhook-connectors/">
+        <div><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M22,5.37H20.56V3a1,1,0,0,0-2,0V5.37H16.23V3a1,1,0,0,0-2,0V5.37H12.79A4.6,4.6,0,0,0,16.4,9.86v2.31a1,1,0,1,0,2,0V9.86A4.6,4.6,0,0,0,22,5.37Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></div>
+        <span>Webhook Connectors</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/terraform/">
+        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 55"><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z" fill="url(#a)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z" fill="url(#b)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z" fill="url(#c)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z" fill="url(#d)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z" fill="url(#e)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z" fill="url(#f)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z" fill="url(#g)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z" fill="url(#h)"/><defs><linearGradient id="a" x1="23.997" y1="9.612" x2="23.997" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="b" x1="23.997" y1="9.612" x2="23.997" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="c" x1="40.544" y1="9.612" x2="40.544" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="d" x1="40.544" y1="9.612" x2="40.544" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="e" x1="7.455" y1="0" x2="7.455" y2="25.828" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="f" x1="7.455" y1="0" x2="7.455" y2="25.828" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="g" x1="23.997" y1="28.716" x2="23.997" y2="54.54" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="h" x1="23.997" y1="28.716" x2="23.997" y2="54.54" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg></div>
+        <span>Terraform</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/build-integrations/">
+        <div><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M16,2H12a.5.5,0,0,0-.5.5v4A.5.5,0,0,0,12,7h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,16,2Zm-.5,4h-3V3h3Z"/><path class="cls-1" d="M21.48,7.5h-4A.5.5,0,0,0,17,8v4a.5.5,0,0,0,.5.5h4A.5.5,0,0,0,22,12V8A.5.5,0,0,0,21.48,7.5Zm-.5,4H18v-3h3Z"/><path class="cls-1" d="M21.48,2h-4a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,21.48,2ZM21,6H18V3h3Z"/><path class="cls-1" d="M15.89,7.32h-4a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5h3.5v3.5a.5.5,0,0,0,.5.5.5.5,0,0,0,.5-.5v-4A.51.51,0,0,0,15.89,7.32Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></div>
+        <span>Build Integrations</span>
+      </a><a class="ProductGrid--link" data-wrap-title="false" href="/scripts/">
+        <div><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M8.33,7.92a1,1,0,0,0-1.39-.29l-4.54,3a1.51,1.51,0,0,0,0,2.76l4.54,3A1,1,0,1,0,8,14.7L3.94,12,8,9.3A1,1,0,0,0,8.33,7.92Z"/><path class="cls-1" d="M21.5,10.62,17,7.63a1,1,0,0,0-1.39.29,1,1,0,0,0,.29,1.38L20,12l-4.1,2.7a1,1,0,0,0-.29,1.38,1,1,0,0,0,.84.45,1,1,0,0,0,.55-.16l4.54-3a1.51,1.51,0,0,0,0-2.76Z"/><path class="cls-1" d="M13.77,2a1,1,0,0,0-1.16.81L9.42,20.86A1,1,0,0,0,10.23,22h.18a1,1,0,0,0,1-.82L14.58,3.14A1,1,0,0,0,13.77,2Z"/></svg></div>
+        <span>Scripts</span>
+      </a></div>
+</div>
+
+<br>
+<br>
+
+<div class="HeroBlockGrid">
+	<div>
+
+<div class="HeroBlock">
+  <div class="HeroBlock--content"><h2 id="community">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#community" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Community</span>
+  </h2><p>The Squadcast community is a place for Squadcast users to share ideas, answers, code and compare notes.</p>
+<ul>
+<li><a href="https://twitter.com/SquadcastHub" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Twitter</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://squadcast.com/blog" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Blog</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://support.squadcast.com/" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Support docs</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://www.squadcast.com/community" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Community</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+</ul>
+</div>
+</div>
+
+    <br>
+    <br>
+    <br>
+
+<div class="HeroBlock">
+  <div class="HeroBlock--content"><h2 id="events">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#events" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Events</span>
+  </h2><p>You can catch Squadcast participating in <a href="https://www.squadcast.com/events" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">events</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> around the world! Meet our team to discuss all
+things SRE and what we&rsquo;re building at Squadcast.</p>
+<h3 id="upcoming-events">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#upcoming-events" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Upcoming Events</span>
+  </h3><h4 id="monitoroma-2022">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#monitoroma-2022" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Monitoroma 2022</span>
+  </h4><p>Portland, OR</p>
+<p>June 27-29, 2022</p>
+  <a href="https://monitorama.com/2022/pdx.html" class="Button Button-is-docs-secondary" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"> View event </span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+  <br>
+<h4 id="kubecon--cloudnativecon-north-america-2022">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#kubecon--cloudnativecon-north-america-2022" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>KubeCon + CloudNativeCon North America 2022</span>
+  </h4><p>Detroit, Michigan</p>
+<p>October 25-28, 2022</p>
+  <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/" class="Button Button-is-docs-secondary" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"> View event </span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+  <br> 
+<h4 id="srecon-europemiddle-eastafrica-2022">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#srecon-europemiddle-eastafrica-2022" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>SREcon Europe/Middle East/Africa 2022</span>
+  </h4><p>Amsterdam, Netherlands</p>
+<p>October 25-27, 2022</p>
+  <a href="https://www.usenix.org/conference/srecon22emea" class="Button Button-is-docs-secondary" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"> View event </span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+  <br>
+<h4 id="srecon-asia-pacific-2022">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#srecon-asia-pacific-2022" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>SREcon Asia Pacific 2022</span>
+  </h4><p>Sydney, Australia</p>
+<p>December 07-09, 2022</p>
+  <a href="https://www.usenix.org/conference/srecon22apac" class="Button Button-is-docs-secondary" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"> View event </span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+</div>
+</div>
+  </div>
+
+  <div>
+<div class="HeroBlock">
+  <div class="HeroBlock--content">  <a hidden class="twitter-timeline" data-height="1000" href="https://twitter.com/SquadcastHQ">
+    <script>setTimeout(function(e){e.setAttribute("data-theme",document.documentElement.getAttribute("theme"));var t=document.createElement("script");t.src="https://platform.twitter.com/widgets.js",t.charset="utf-8",t.async=!0,document.body.appendChild(t)},50,document.currentScript.parentElement)</script>
+    Tweets by Squadcast
+  </a>
+</div>
+</div>
+  </div>
+</div>
+</article>
+        </div>
+      </main>
+    </div></body>
+</html>
