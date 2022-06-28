@@ -1,5 +1,5 @@
 name: Scripts
-logo: <svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M8.33,7.92a1,1,0,0,0-1.39-.29l-4.54,3a1.51,1.51,0,0,0,0,2.76l4.54,3A1,1,0,1,0,8,14.7L3.94,12,8,9.3A1,1,0,0,0,8.33,7.92Z"/><path class="cls-1" d="M21.5,10.62,17,7.63a1,1,0,0,0-1.39.29,1,1,0,0,0,.29,1.38L20,12l-4.1,2.7a1,1,0,0,0-.29,1.38,1,1,0,0,0,.84.45,1,1,0,0,0,.55-.16l4.54-3a1.51,1.51,0,0,0,0-2.76Z"/><path class="cls-1" d="M13.77,2a1,1,0,0,0-1.16.81L9.42,20.86A1,1,0,0,0,10.23,22h.18a1,1,0,0,0,1-.82L14.58,3.14A1,1,0,0,0,13.77,2Z"/></svg>
+logo: <svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M8.33,7.92a1,1,0,0,0-1.39-.29l-4.54,3a1.51,1.51,0,0,0,0,2.76l4.54,3A1,1,0,1,0,8,14.7L3.94,12,8,9.3A1,1,0,0,0,8.33,7.92Z"/><path class="cls-1" d="M21.5,10.62,17,7.63a1,1,0,0,0-1.39.29,1,1,0,0,0,.29,1.38L20,12l-4.1,2.7a1,1,0,0,0-.29,1.38,1,1,0,0,0,.84.45,1,1,0,0,0,.55-.16l4.54-3a1.51,1.51,0,0,0,0-2.76Z"/><path class="cls-1" d="M13.77,2a1,1,0,0,0-1.16.81L9.42,20.86A1,1,0,0,0,10.23,22h.18a1,1,0,0,0,1-.82L14.58,3.14A1,1,0,0,0,13.77,2Z"/></svg>
 
 product:
   title: Scripts
@@ -13,6 +13,8 @@ meta:
 
 externals:
   - title: Full API docs
-    url: https://api.cloudflare.com/
-  - title: Cloudflare homepage
-    url: https://cloudflare.com
+    url: https://apidocs.squadcast.com/
+  - title: Support docs
+    url: https://support.squadcast.com
+  - title: Squadcast homepage
+    url: https://squadcast.com

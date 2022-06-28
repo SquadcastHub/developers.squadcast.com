@@ -15,6 +15,12 @@ meta:
 
 externals:
   - title: Full API docs
-    url: https://api.cloudflare.com/
-  - title: Cloudflare homepage
-    url: https://cloudflare.com
+    url: https://apidocs.squadcast.com/
+  - title: Support docs
+    url: https://support.squadcast.com
+  - title: Squadcast homepage
+    url: https://squadcast.com
+  - title: Terraform Registry
+    url: https://registry.terraform.io/providers/SquadcastHub/squadcast/latest/docs
+  - title: Squadcast Terraform Repository
+    url: https://github.com/SquadcastHub/terraform-provider-squadcast

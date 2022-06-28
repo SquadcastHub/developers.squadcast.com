@@ -1,10 +1,10 @@
 ---
-title: Quickstart
+title: Squadcast API
 pcx-content-type: tutorial
 layout: single
 weight: 1
 meta:
-  title: Getting access to the Squadcast API
+  title: Getting started with the Squadcast API
 ---
 
 # API
