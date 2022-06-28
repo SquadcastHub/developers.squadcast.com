@@ -1151,6 +1151,9 @@ html {
 [theme="dark"] .ThemeToggle[data-is-loading="true"] .ThemeToggle--moon {
   color: var(--orange);
 }
+[theme="dark"] .ThemeToggle--moon{
+  color: white !important;
+}
 .ThemeToggle--input:checked ~ .ThemeToggle--toggle .ThemeToggle--sun,
 [theme="dark"] .ThemeToggle[data-is-loading="true"] .ThemeToggle--sun {
   color: rgba(var(--gray-6-rgb), 0.8);
@@ -1237,8 +1240,8 @@ html {
   box-shadow: 0 0 0 var(--focus-size) var(--focus-color);
 }
 .Dropdown--link:hover {
-  color: var(--orange);
-  background: rgba(var(--orange-rgb), 0.05);
+  color: var(--code-blue);
+  background: rgba(var(--code-blue), 0.05);
 }
 [theme="dark"] .Dropdown--link:hover {
   background: rgba(var(--color-rgb), 0.05);
@@ -1860,11 +1863,29 @@ span.Tooltip---root {
   /*color: var(--orange);*/
   margin-right: var(--gap);
   flex-shrink: 0;
-  fill: var(--squadcast-logo-blue-rgb);
+   fill: #6d777b; 
 }
-.DocsNavLogoLockup--logo path {
+/* .DocsNavLogoLockup--logo path {
   fill: var(--squadcast-logo-blue-rgb);
+} */
+[theme="dark"] .DocsNavLogoLockup--logo{
+  fill: white;
 }
+.logo-box{
+  height: 21px;
+  width: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+[theme="light"] .logo-box{
+  background-image: url(https://uploads-ssl.webflow.com/5c51758c58939b30a6fd3d73/61c46dede24a2083002b1093_Squadcast_symbol.png);
+}
+
+[theme="dark"] .logo-box{
+  background-image: url(https://uploads-ssl.webflow.com/5c51758c58939b30a6fd3d73/61c4401a1905040576919702_300x300_Squadcast_symbol.png);
+}
+
 .DocsNavLogoLockup--text {
   font-size: var(--font-size, 1em);
   font-weight: 700;
@@ -2401,6 +2422,9 @@ html[is-docs-page] body {
   background: var(--squadcast-logo-blue-rgb);
   z-index: 4;
 }
+[theme="dark"] .DocsSidebar--nav-link[is-active]:before{
+  background: white;
+}
 .DocsSidebar--nav-link-text {
   position: relative;
   display: inline-block;
@@ -2642,7 +2666,7 @@ html[is-docs-page] body {
   margin: -0.2em 0;
 }
 .DocsTableOfContents-link:hover {
-  color: var(--orange);
+  color: var(--code-blue);
 }
 [js-focus-visible-polyfill-available] .DocsTableOfContents-link:focus {
   outline: none;
@@ -2724,9 +2748,8 @@ html[is-docs-page] body {
   box-shadow: var(--focus-shadow);
 }
 .DocsMarkdown--link .DocsMarkdown--link-content {
-  background-color: var(--background-color);
-  border-bottom: 1px solid
-    rgba(var(--border-bottom-color-rgb), var(--border-bottom-color-alpha));
+  background-color: rgb(var(--blue-rgb),0.12);
+  /* border-bottom: 1px solid rgba(var(--border-bottom-color-rgb), var(--border-bottom-color-alpha)); */
 }
 .DocsMarkdown--link-external-icon {
   display: inline-block;

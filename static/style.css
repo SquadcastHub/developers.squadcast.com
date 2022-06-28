@@ -1863,7 +1863,7 @@ span.Tooltip---root {
   /*color: var(--orange);*/
   margin-right: var(--gap);
   flex-shrink: 0;
-  /* fill: var(--squadcast-logo-blue-rgb); */
+   fill: #6d777b; 
 }
 /* .DocsNavLogoLockup--logo path {
   fill: var(--squadcast-logo-blue-rgb);
@@ -2748,9 +2748,8 @@ html[is-docs-page] body {
   box-shadow: var(--focus-shadow);
 }
 .DocsMarkdown--link .DocsMarkdown--link-content {
-  background-color: var(--background-color);
-  border-bottom: 1px solid
-    rgba(var(--border-bottom-color-rgb), var(--border-bottom-color-alpha));
+  background-color: rgb(var(--blue-rgb),0.12);
+  /* border-bottom: 1px solid rgba(var(--border-bottom-color-rgb), var(--border-bottom-color-alpha)); */
 }
 .DocsMarkdown--link-external-icon {
   display: inline-block;

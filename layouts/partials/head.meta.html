@@ -3,7 +3,7 @@
 {{- $META := merge $DATA.meta (default dict .Context.Params.meta) -}}
 
 {{- $pt := default .Context.Title .Context.Params.meta.title -}}
-{{- $title := printf "%s · %s" $pt $DATA.meta.title -}}
+{{- $title := printf "%s" $pt -}}
 
 <meta charset="utf-8">
 <title>{{ $title }}</title>
