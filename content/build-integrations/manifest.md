@@ -45,7 +45,7 @@ meta:
 
 ## Manifest explained
 
-**Example used** : [**Prometheus**](../manifests/prometheus/prometheus.yaml)
+**Example used** : [**Prometheus**](https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/prometheus/manifest.yaml)
 
 ```yaml
 kind: AlertSource
