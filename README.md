@@ -1,8 +1,8 @@
 # Squadcast Developer Docs
 
-**[View the docs →](https://developers.squadcast.com/)**
+**[View the docs →](https://developer.squadcast.com/)**
 
-Note: This devoloper portal is inspired from Cloudflare developer portal and we have forked their repository to create this.
+Note: This devoloper portal is inspired from Cloudflare developer portal and we have forked [their repository](https://github.com/cloudflare/cloudflare-docs) to create this.
 
 
 ## Setup
