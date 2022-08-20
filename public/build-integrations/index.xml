@@ -2,20 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quickstart on Squadcast Developers</title>
-    <link>https://squadcast-devoloper-portalx.pages.dev/build-integrations/</link>
+    <link>https://developers.squadcast.com/build-integrations/</link>
     <description>Recent content in Quickstart on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/build-integrations/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://developers.squadcast.com/build-integrations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build Alert Sources</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</link>
+      <link>https://developers.squadcast.com/build-integrations/alert-sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</guid>
+      <guid>https://developers.squadcast.com/build-integrations/alert-sources/</guid>
       <description>Build Alert SourcesSquadcast supports over 100+ integrations with a range of observability tools in the market today as alert sources.
-Squadcast now offers a platform for its users to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
-Through this platform, users can easily build integrations, document it and contribute to help the other users of our growing community.
-Integrations are built using Webhooks.</description>
+Squadcast now offers a platform for its users &amp;amp; partners to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
+Integrations are built using Webhooks. These integrations can support both triggering and automatic resolution of alerts in Squadcast when the alerts in the observability tool get resolved and send signals via the configured Webhooks.</description>
+    </item>
+    
+    <item>
+      <title>How to write manifests?</title>
+      <link>https://developers.squadcast.com/build-integrations/manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.squadcast.com/build-integrations/manifest/</guid>
+      <description>How to write manifests? &amp;#8203;​ Topic of Contents Manifest explained Unwanted/Unused fields kind Fields used only for UI use cases type heading supportDoc displayKeyOnly Fields used for deprecation notices in UI deprecated deprecationMessage Fields actually used by ingester for processing version isNative shortName isValid isBatched arraySelector How does the processing happen? eventIndicator message description isPrivate hideAutomation metadata helperTemplates Best practices for writing message and description templates Incident Message Incident Description Further Reference &amp;#8203;​ Manifest explained Example used : Prometheus External link icon Open external link kind: AlertSource version: v1 isNative: false type: Prometheus shortName: prometheus isValid: true isBatched: true arraySelector: &amp;#34;${$root.</description>
+    </item>
+    
+    <item>
+      <title>Template functions</title>
+      <link>https://developers.squadcast.com/build-integrations/template-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.squadcast.com/build-integrations/template-functions/</guid>
+      <description>Template functionsThis document contains the various template functions that can be used in the ingester configuration (manifest.yaml).
+&amp;#8203;​ toFloat This function is used to convert the passed in int64 value to a float64 value.
+Example Usage
+${toFloat 56} renders as 56.0.
+&amp;#8203;​ minus This function is used to subtract a int64 value from another.
+Example Usage
+${minus 34 20} renders as 14.
+&amp;#8203;​ minusf Similar to minus this used to subtract 2 float64 values.</description>
     </item>
     
   </channel>

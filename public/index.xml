@@ -2,47 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Squadcast Developers</title>
-    <link>https://squadcast-devoloper-portalx.pages.dev/</link>
+    <link>https://developers.squadcast.com/</link>
     <description>Recent content on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://developers.squadcast.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build Alert Sources</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</link>
+      <link>https://developers.squadcast.com/build-integrations/alert-sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/build-integrations/alert-sources/</guid>
+      <guid>https://developers.squadcast.com/build-integrations/alert-sources/</guid>
       <description>Build Alert SourcesSquadcast supports over 100+ integrations with a range of observability tools in the market today as alert sources.
-Squadcast now offers a platform for its users to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
-Through this platform, users can easily build integrations, document it and contribute to help the other users of our growing community.
-Integrations are built using Webhooks.</description>
+Squadcast now offers a platform for its users &amp;amp; partners to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
+Integrations are built using Webhooks. These integrations can support both triggering and automatic resolution of alerts in Squadcast when the alerts in the observability tool get resolved and send signals via the configured Webhooks.</description>
     </item>
     
     <item>
       <title>API documentation</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/api/documentation/</link>
+      <link>https://developers.squadcast.com/api/documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/api/documentation/</guid>
+      <guid>https://developers.squadcast.com/api/documentation/</guid>
       <description>API documentationGo to apidocs.squadcast.com External link icon Open external link for documentation of all of Squadcast&amp;rsquo;s API endpoints.</description>
     </item>
     
     <item>
       <title>Cloudflare worker script</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/cloudflare-worker/</link>
+      <link>https://developers.squadcast.com/webhook-connectors/cloudflare-worker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/cloudflare-worker/</guid>
+      <guid>https://developers.squadcast.com/webhook-connectors/cloudflare-worker/</guid>
       <description> Cloudflare workers based connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Cloudflare-Webhook-Connectors External link icon Open external link Cloudflare workers help you deploy serverless code instantly across the globe on its edge and we have created a 1-click Deploy with Workers script, which will help you get started quickly.
 &amp;#8203;​ ChatOps Slack Discord Microsoft Teams &amp;#8203;​ Ticketing Trello </description>
     </item>
     
     <item>
-      <title>Nodejs</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/nodejs/</link>
+      <title>How to write manifests?</title>
+      <link>https://developers.squadcast.com/build-integrations/manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/webhook-connectors/nodejs/</guid>
+      <guid>https://developers.squadcast.com/build-integrations/manifest/</guid>
+      <description>How to write manifests? &amp;#8203;​ Topic of Contents Manifest explained Unwanted/Unused fields kind Fields used only for UI use cases type heading supportDoc displayKeyOnly Fields used for deprecation notices in UI deprecated deprecationMessage Fields actually used by ingester for processing version isNative shortName isValid isBatched arraySelector How does the processing happen? eventIndicator message description isPrivate hideAutomation metadata helperTemplates Best practices for writing message and description templates Incident Message Incident Description Further Reference &amp;#8203;​ Manifest explained Example used : Prometheus External link icon Open external link kind: AlertSource version: v1 isNative: false type: Prometheus shortName: prometheus isValid: true isBatched: true arraySelector: &amp;#34;${$root.</description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://developers.squadcast.com/webhook-connectors/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.squadcast.com/webhook-connectors/nodejs/</guid>
       <description>Nodejs connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Webhook-Connectors External link icon Open external link The following connectors are currently available:
 &amp;#8203;​ ChatOps Slack External link icon Open external link Use this to notify your Slack channels about Squadcast Incident related updates, supports multiple channels. Alternatively, you can use our Slack extension as well.
 Discord External link icon Open external link Use this to notify your Discord channels about Squadcast Incident related updates, supports multiple channels.</description>
@@ -50,10 +58,10 @@ Discord External link icon Open external link Use this to notify your Discord ch
     
     <item>
       <title>Payload format</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/payload-format/</link>
+      <link>https://developers.squadcast.com/incoming-webhooks/payload-format/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/payload-format/</guid>
+      <guid>https://developers.squadcast.com/incoming-webhooks/payload-format/</guid>
       <description>&amp;#8203;​ Header Ensure that you add a header Content-Type with value application/json while making the HTTP POST request.
 Content-Type:application/json
 &amp;#8203;​ Payload The body of the POST request should contain the details of your incident in the following format:
@@ -62,50 +70,47 @@ Content-Type:application/json
     
     <item>
       <title>Payload format</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/payload-format/</link>
+      <link>https://developers.squadcast.com/outgoing-webhooks/payload-format/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/payload-format/</guid>
+      <guid>https://developers.squadcast.com/outgoing-webhooks/payload-format/</guid>
       <description>Webhook Payloads &amp;#8203;​ Incident Triggered { &amp;#34;id&amp;#34;: &amp;#34;61c075f78589dca75fdb2f44&amp;#34;, &amp;#34;event_type&amp;#34;: &amp;#34;incident_triggered&amp;#34;, &amp;#34;organization&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;609b8e9978d2770008db8638&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;My Org&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61518af788792704697f3da0&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;email trigger&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;email-trigger&amp;#34; }, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;5fae6d03ef87d3896aa92ad1&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;message&amp;#34;: &amp;#34;CPU Throttling: Over 90% of cpu is being utilized&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Over 90% of cpu is being utilized from the past 2 hours which is a drastic increase from before. Please checkout the metrics.</description>
     </item>
     
     <item>
       <title>Use cases</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/</link>
+      <link>https://developers.squadcast.com/incoming-webhooks/use-cases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/</guid>
+      <guid>https://developers.squadcast.com/incoming-webhooks/use-cases/</guid>
       <description>Use-cases for incoming webhooksYou can use our incoming webhooks to do a lot of things, you are only limited by your imagination. Some of the most common use cases are listed below.
 Route alerts from observability tools Route alerts from internal tools Capture issues via a webform from internal or external stakeholders and route it to a service using incoming webhooks. If you use our incoming webhooks for some other use cases, please let us know and we will be happy to update it here.</description>
     </item>
     
     <item>
       <title>Use cases</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/use-cases/</link>
+      <link>https://developers.squadcast.com/outgoing-webhooks/use-cases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/use-cases/</guid>
+      <guid>https://developers.squadcast.com/outgoing-webhooks/use-cases/</guid>
       <description> Use-cases for outgoing WebhooksWebhooks can be leveraged in various scenarios. We have put together some common use-cases.
 Building internal custom dashboards to visualize or analyze incidents Sending data to ticketing tools, such as Zendesk, Freshdesk, Shortcut, Asana, etc. Sending events to communication apps, such as Slack, MS Teams, etc. Alerting when a workflow is disrupted- then use the API to re-run the workflow Triggering internal notification systems to alert people when incidents are created/resolved Building your own automation plug-ins and tools </description>
     </item>
     
     <item>
-      <title>Not found</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/404.html</link>
+      <title>Template functions</title>
+      <link>https://developers.squadcast.com/build-integrations/template-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/404.html</guid>
-      <description>Not foundUnfortunately, the page you requested cannot be found.
-Go home</description>
-    </item>
-    
-    <item>
-      <title>Search results</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://squadcast-devoloper-portalx.pages.dev/search/</guid>
-      <description> </description>
+      <guid>https://developers.squadcast.com/build-integrations/template-functions/</guid>
+      <description>Template functionsThis document contains the various template functions that can be used in the ingester configuration (manifest.yaml).
+&amp;#8203;​ toFloat This function is used to convert the passed in int64 value to a float64 value.
+Example Usage
+${toFloat 56} renders as 56.0.
+&amp;#8203;​ minus This function is used to subtract a int64 value from another.
+Example Usage
+${minus 34 20} renders as 14.
+&amp;#8203;​ minusf Similar to minus this used to subtract 2 float64 values.</description>
     </item>
     
   </channel>

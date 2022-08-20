@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en" theme="light" is-docs-page js-focus-visible-polyfill-available>
+  <head><meta charset="utf-8">
+<title>Template functions</title>
+<meta http-equiv="cleartype" content="on"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="application-name" content="Template functions"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-title" content="Template functions"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#f38020"/>
+
+<meta name="description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it." />
+
+<meta property="og:image" content="https://developers.squadcast.com"/>
+<meta property="og:title" content="Template functions"/>
+<meta property="og:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta property="og:type" content="website"/>
+
+<meta name="twitter:title" content="Template functions"/>
+<meta name="twitter:image" content="https://developers.squadcast.com"/>
+<meta name="twitter:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta name="twitter:creator" content="@SquadcastHub"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="icon" href="/favicon-32x32.png"/>
+<link rel="canonical" href="https://developers.squadcast.com/build-integrations/template-functions/"/>
+<link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+
+<link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/>
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
+<link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
+<link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
+    <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
+    <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
+  </head>
+  <body>
+  <div class="DocsPage"><div class="DocsMobileHeader">
+  <a class="DocsMobileHeader--cloudflare-logo-link Link Link-without-underline" href="/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo" style="width: 10%;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_) !important;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_) !important;}
+</style>
+<g id="Group-Copy">
+	
+		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF !important"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
+		<stop  offset="1" style="stop-color:#000395 !important"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
+		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
+		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
+	
+		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF !important"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
+		<stop  offset="1" style="stop-color:#000395 !important"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
+		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
+		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
+</g>
+
+</div>
+<span class="DocsNavLogoLockup--text">
+  <span data-text="Squadcast">Squadcast </span>
+  <span data-text="Docs">Docs </span>
+</span>
+    </div>
+  </a>
+</div>
+
+<div class="DocsMobileTitleHeader">
+  <a aria-current="page" class="DocsMobileTitleHeader--logo-link Link Link-without-underline" href="/build-integrations/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo">
+        <span title="Squadcast Build-Integrations logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M16,2H12a.5.5,0,0,0-.5.5v4A.5.5,0,0,0,12,7h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,16,2Zm-.5,4h-3V3h3Z"/><path class="cls-1" d="M21.48,7.5h-4A.5.5,0,0,0,17,8v4a.5.5,0,0,0,.5.5h4A.5.5,0,0,0,22,12V8A.5.5,0,0,0,21.48,7.5Zm-.5,4H18v-3h3Z"/><path class="cls-1" d="M21.48,2h-4a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,21.48,2ZM21,6H18V3h3Z"/><path class="cls-1" d="M15.89,7.32h-4a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5h3.5v3.5a.5.5,0,0,0,.5.5.5.5,0,0,0,.5-.5v-4A.51.51,0,0,0,15.89,7.32Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></span>
+      </div>
+
+      <span class="DocsNavLogoLockup--text">
+        <span class="DocsSidebar--docs-title-text-scaler" style="--length:18">Build-Integrations</span>
+      </span>
+    </div>
+  </a>
+
+  <button class="Button DocsMobileTitleHeader--sidebar-toggle-button">
+    <span class="DocsMobileTitleHeader--sidebar-toggle-button-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-1332672649688018"
+        xmlns="http://www.w3.org/2000/svg">
+        <title id="title-1332672649688018">Navigation menu icon</title>
+        <path data-index="1" d="M5, 7h10" transform-origin="10  7"></path>
+        <path data-index="2" d="M5,10h10" transform-origin="10 10"></path>
+        <path data-index="3" d="M5,13h10" transform-origin="10 13"></path>
+      </svg>
+      <span is-visually-hidden="">Open external link</span>
+    </span>
+  </button>
+</div>
+
+<div class="DocsMobileNavBackdrop"></div><div class="DocsSidebar">
+  <div class="DocsSidebar--sections">
+    <div class="DocsSidebar--section DocsSidebar--header-section">
+      <a class="DocsSidebar--cloudflare-logo-link DocsSidebar--link" href="/">
+        <div class="DocsNavLogoLockup">
+          
+          <div class="logo-box"></div><span class="DocsNavLogoLockup--text">Squadcast Docs</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="DocsSidebar--section-separator"></div>
+
+    <div class="DocsSidebar--section DocsSidebar--docs-title-section">
+      <a aria-current="page" class="DocsSidebar--docs-title-logo-link DocsSidebar--link" href="/build-integrations/">
+        <div class="DocsNavLogoLockup">
+          <div class="DocsNavLogoLockup--logo">
+            <span title="Squadcast Build Integrations logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M16,2H12a.5.5,0,0,0-.5.5v4A.5.5,0,0,0,12,7h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,16,2Zm-.5,4h-3V3h3Z"/><path class="cls-1" d="M21.48,7.5h-4A.5.5,0,0,0,17,8v4a.5.5,0,0,0,.5.5h4A.5.5,0,0,0,22,12V8A.5.5,0,0,0,21.48,7.5Zm-.5,4H18v-3h3Z"/><path class="cls-1" d="M21.48,2h-4a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,21.48,2ZM21,6H18V3h3Z"/><path class="cls-1" d="M15.89,7.32h-4a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5h3.5v3.5a.5.5,0,0,0,.5.5.5.5,0,0,0,.5-.5v-4A.51.51,0,0,0,15.89,7.32Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></span>
+          </div>
+
+          <span class="DocsNavLogoLockup--text">
+            <span class="DocsSidebar--docs-title-text-scaler" style="--length:18">Build Integrations</span>
+          </span>
+        </div>
+      </a>
+
+      <div class="DocsSidebar--section-more Dropdown" data-expanded="false">
+        <button class="DocsSidebar--section-more-button Button" aria-expanded="false">
+          <div class="DocsSidebar--section-more-button-icon">
+            <svg viewBox="0 0 4 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" fill="currentColor" role="img" aria-labelledby="title-6032186738345315"
+              xmlns="http://www.w3.org/2000/svg">
+              <title id="title-6032186738345315">Dropdown icon</title>
+              <path d="M2,2v0m0,6v0m0,6v0z"></path>
+            </svg>
+            <span is-visually-hidden>Build Integrations menu</span>
+          </div>
+        </button>
+
+        <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
+          <ul class="Dropdown--list"><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://squadcast.com" tabindex="-1">Squadcast homepage</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://support.squadcast.com" tabindex="-1">Support docs</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="/webhook-connectors/" tabindex="-1">Webhook connectors</a>
+              </li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="DocsSidebar--section DocsSidebar--nav-section" style="position:relative;overflow:hidden;width:100%;height:100%">
+      <div style="position: absolute; inset: 0px; overflow-y: auto; margin-right: 0px; margin-bottom: 0px;">
+        <div class="DocsSidebar--nav-section-shadow" style="opacity: 0;"></div>
+
+        <ul class="DocsSidebar--nav">
+          <li class="DocsSidebar--nav-item">
+            <a class="DocsSidebar--nav-link" href="/build-integrations/">
+              <span class="DocsSidebar--nav-link-highlight"></span>
+              <span class="DocsSidebar--nav-link-text">Overview</span>
+            </a>
+          </li>
+          <li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/build-integrations/alert-sources/">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Build Alert Sources</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/build-integrations/manifest/">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">How to write manifests?</span>
+    </a></li><li class="DocsSidebar--nav-item" is-active><a aria-current="page" class="DocsSidebar--nav-link" href="/build-integrations/template-functions/" is-active>
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Template functions</span>
+    </a></li></ul>
+      </div>
+      <div style="position:absolute;height:6px;display:none;right:2px;bottom:2px;left:2px;border-radius:3px">
+        <div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div>
+      </div>
+      <div style="position:absolute;width:6px;display:none" class="Scrollbars--track Scrollbars--track-vertical">
+        <div style="position:relative;display:block;width:100%" class="Scrollbars--thumb Scrollbars--thumb-vertical"></div>
+      </div>
+    </div>
+  </div>
+  <div class="DocsSidebar--shadow"></div>
+</div><div class="DocsToolbar"><div class="DocsToolbar--search CoveoSearchInterface">
+  <div class="DocsSearch">
+    <div class="DocsSearch--input-wrapper">
+      
+
+      <div class="DocsSearch--input-icon">
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+<div class="DocsToolbar--tools">
+  
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--tools-icon-item">
+    <div class="Tooltip---root">
+      <div class="DocsToolbar--tools-icon-item-content">
+        <a class="Link Link-without-underline" href="https://github.com/SquadcastHub/developers.squadcast.com">
+          <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6991762763429039" xmlns="http://www.w3.org/2000/svg">
+            <title id="title-6991762763429039">GitHub icon</title>
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+
+      <span class="Tooltip" role="tooltip" position="bottom-end">
+        Visit Build Integrations on GitHub
+      </span>
+    </div>
+  </div>
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--theme-toggle"><div class="Tooltip---root">
+  <div class="ThemeToggle">
+    <input type="checkbox" id="ThemeToggle" class="ThemeToggle--input">
+
+    <label class="ThemeToggle--toggle" for="ThemeToggle">
+      <div class="ThemeToggle--toggle-handle"></div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--sun">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-8812071124069258" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-8812071124069258">Light theme icon (depiction of a sun)</title>
+          <path d="M7.5 11.465a3.482 3.482 0 01-1.596-.662L4.11 12.596a.5.5 0 01-.707-.707l1.793-1.793A3.482 3.482 0 014.535 8.5H2a.5.5 0 010-1h2.535a3.482 3.482 0 01.662-1.596L3.404 4.11a.5.5 0 01.707-.707l1.793 1.793A3.482 3.482 0 017.5 4.535V2a.5.5 0 011 0v2.535a3.482 3.482 0 011.596.662l1.793-1.793a.5.5 0 01.707.707l-1.793 1.793c.343.458.577 1.003.662 1.596H14a.5.5 0 110 1h-2.535a3.482 3.482 0 01-.662 1.596l1.793 1.793a.5.5 0 01-.707.707l-1.793-1.793a3.482 3.482 0 01-1.596.662V14a.5.5 0 11-1 0v-2.535z"></path>
+        </svg>
+      </div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--moon">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-5971296394189265" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-5971296394189265">Dark theme icon (depiction of a moon)</title>
+          <path d="M7.067 3.087a5 5 0 005.466 7.026 5 5 0 11-5.466-7.026z"></path>
+        </svg>
+      </div>
+    </label>
+
+    <span class="Tooltip" role="tooltip" position="bottom-end">Set theme to dark (⇧+D)</span>
+  </div>
+</div></div>
+</div></div>
+
+    <main class="DocsBody">
+      <div class="DocsBody--sidebar" with-styled-webkit-scrollbars="">
+  <div class="DocsBody--sidebar-content-scroll-fade"></div>
+  <div class="DocsBody--sidebar-content">
+      <ul class="DocsTableOfContents" hidden>
+        <li><a class="DocsTableOfContents-link" href="#docs-content">↑ Top</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+      <div id="docs-content" data-reach-skip-nav-content></div>
+
+      <div class="DocsContent" page-type="document">
+        <article class="DocsMarkdown">
+  <h1 id="template-functions">Template functions</h1><p>This document contains the various template functions that can be used in the ingester configuration (manifest.yaml).</p>
+<h3 id="tofloat">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#tofloat" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toFloat</code></span>
+  </h3><p>This function is used to convert the passed in <code>int64</code> value to a <code>float64</code> value.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${toFloat 56}
+</span></span></code></pre></div><p>renders as <code>56.0</code>.</p>
+<h3 id="minus">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#minus" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>minus</code></span>
+  </h3><p>This function is used to subtract a <code>int64</code> value from another.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${minus 34 20}
+</span></span></code></pre></div><p>renders as <code>14</code>.</p>
+<h3 id="minusf">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#minusf" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>minusf</code></span>
+  </h3><p>Similar to <code>minus</code> this used to subtract 2 <code>float64</code> values.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${minusf 34 20}
+</span></span></code></pre></div><p>renders as <code>14.0</code>.</p>
+<h3 id="add">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#add" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>add</code></span>
+  </h3><p>This function is used to add two <code>int64</code> values.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${add 34 8}
+</span></span></code></pre></div><p>renders as <code>42</code></p>
+<h3 id="httpget">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#httpget" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>httpGet</code></span>
+  </h3><p>This function is used to call a HTTP URL.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${httpGet &#34;https://httpbin.org/ip&#34;}
+</span></span></code></pre></div><p>renders as <code>true</code></p>
+<p><strong>Why</strong></p>
+<p>This function was written because some systems that we integrate with requires a webhook validation step before that system can send alerts through the webhook. For example, AWS Cloudwatch sends a JSON payload when the user configures it with squadcast. This initial payload is not an alert event, rather this payload contains an <code>SubscriptionConfirmation</code> URL which had to be called. Once this is called, AWS will start sending any alerts if any.</p>
+<p>Checkout <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch/manifest.yaml#L17" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">AWS Configuration</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> for more info.</p>
+<h3 id="concat">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#concat" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>concat</code></span>
+  </h3><p>This function used to add/concatenate two strings.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${concat &#34;Hello&#34; &#34; World!&#34;}
+</span></span></code></pre></div><p>renders as <code>Hello World!</code></p>
+<h3 id="trim">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#trim" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>trim</code></span>
+  </h3><p>This function is used to trim the spaces from the start and end of the passed string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${trim &#34;  Lots of me    &#34;}
+</span></span></code></pre></div><p>renders as <code>Lots of me</code></p>
+<h3 id="unsnake">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#unsnake" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>unsnake</code></span>
+  </h3><p>This function is used to replace all the underscores (<code>_</code>) wirh a single space each from the passed string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${unsnake &#34;hiss_hiss_hiss&#34;}
+</span></span></code></pre></div><p>renders as <code>hiss hiss hiss</code></p>
+<h3 id="capitalize">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#capitalize" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>capitalize</code></span>
+  </h3><p>This function capitalizes the first letter of the passed string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${capitalize &#34;hello World!!&#34;}
+</span></span></code></pre></div><p>renders as <code>Hello World!!</code></p>
+<h3 id="tolower">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#tolower" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toLower</code></span>
+  </h3><p>This function is used to convert the passed string to lower case.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${toLower &#34;DON&#39;T SHOUT!!&#34;}
+</span></span></code></pre></div><p>renders as <code>don't shout!!</code></p>
+<h3 id="jsonparse">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#jsonparse" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>jsonParse</code></span>
+  </h3><p>This function is used to parse the passed JSON string and return the Go&rsquo;s notation of the JSON object.</p>
+<p>If the passed string contains a JSON Object at the root level, then a <code>map[string]interface{}</code> is returned. If array is at the root level, <code>[]interface{}</code> is returned. This inturn can be used inside the template as well.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${jsonParse &#34;{\&#34;name\&#34; : \&#34;John Doe\&#34;}&#34;}
+</span></span></code></pre></div><p>Generally this is used as value with with the subsequent templates can be formed. This should not be rendered directly else will yield unfavourable/unreadable results.</p>
+<p><strong>Why</strong></p>
+<p>AWS Cloudwatch sends JSON object as a serialized string in it&rsquo;s alerts instead of a nested JSON Object. So we have to parse that string to get the field values inside the JSON string.</p>
+<p>Checkout <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch/manifest.yaml#L11" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">AWS Cloudwatch configuration</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> and <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch/payload/cloudwatch_notification_alarm.json#L6" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Sample AWS Cloudwatch payload</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> for more.</p>
+<h3 id="tojson">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#tojson" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toJSON</code></span>
+  </h3><p>This function is used to convert the passed template variable into the JSON representation.</p>
+<p><strong>Example Usage</strong></p>
+<p>This function is only used internally to get the array selector from the incoming payload as a Go variable. This is not used in any of the alert source configurations so far.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${toJSON $ages}
+</span></span></code></pre></div><p>Assuming <code>$ages</code> is a variable which contains a map of names to ages, this renders as:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&#34;John&#34;:28,&#34;Eve&#34;:30,&#34;Mary&#34;:27}
+</span></span></code></pre></div><h3 id="toyaml">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#toyaml" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toYAML</code></span>
+  </h3><p>This function is used to convert the passed template variable into the YAML representation.</p>
+<p><strong>Example Usage</strong></p>
+<p>This function is used to display nested JSON data since YAML makes it more readable</p>
+<pre><code>${toYAML $stats}
+</code></pre>
+<p>Assuming <code>$stats</code> is the following JSON</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;john&#34;</span><span class="p">,</span> <span class="nt">&#34;details&#34;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&#34;height&#34;</span><span class="p">:</span> <span class="mi">176</span><span class="p">,</span><span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">65</span><span class="p">}}</span>
+</span></span></code></pre></div><p>the output of toYAML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">john</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">details</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="m">176</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">65</span><span class="w">
+</span></span></span></code></pre></div><h3 id="toint">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#toint" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toInt</code></span>
+  </h3><p>This function is used convert the passed string to <code>int64</code> (Base 10). If the passed string cannot be parsed into integer, then <code>0</code> is returned.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${toInt &#34;121231&#34;}
+</span></span></code></pre></div><p>renders as <code>121231</code>. It is same for rendering the string and the int version. This is mostly used to perform calculations like <code>minus</code>, <code>add</code> etc.,</p>
+<h3 id="typeof">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#typeof" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>typeOf</code></span>
+  </h3><p>This is a debug function which is used to print the type of the passed variable. It returns <code>0</code> no matter what.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${typeOf 45}
+</span></span></code></pre></div><p>renders as <code>0</code> but <code>Type of 45 is int</code> will be printed in the stdout of ingester. This is merely a debug helper function. Should not be used for production alert source configurations.</p>
+<h3 id="str">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#str" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>str</code></span>
+  </h3><p>This function is used to <code>sprint</code> any passed arguments.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${str $ages}
+</span></span></code></pre></div><p>Assuming similar example as <code>toJSON</code>, this will render as <code>map[John:28 Eve:30 Mary:27]</code>. This should be used only for debugging purposes.</p>
+<h3 id="strf">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#strf" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>strf</code></span>
+  </h3><p>This function is similar to <code>sprintf</code> where the arguments are formatted into a string based on a passed format.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${strf &#34;%X&#34; 30}
+</span></span></code></pre></div><p>renders as <code>1E</code>.</p>
+<h3 id="ftoi">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#ftoi" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>ftoi</code></span>
+  </h3><p>This function is used to convert the passed <code>float64</code> to <code>int64</code>.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${ftoi 45.0}
+</span></span></code></pre></div><p>renders as <code>45</code>. When a JSON data is unmarshalled using a generic data type <code>interface{}</code>, the underlying type becomes <code>map[string]interface{}</code> / <code>[]interface{}</code>. And the string values are stored as <code>string</code>, <code>true</code>/<code>false</code> as booleans, numbers as <code>float64</code> even though it might have been an <code>int64</code>. Go prints the <code>float64</code> representation as exponential format like <code>2.124987e6</code> which when converted to <code>int64</code> gets formatted right.</p>
+<h3 id="showif">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#showif" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>showIf</code></span>
+  </h3><p>This function is used to render a line with a variable, only if the passed variable is not <code>nil</code>.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${ showIf &#34;Agent&#34; $root.agent_name -}
+</span></span></code></pre></div><p>(assuming $root.agent_name is <code>falcon</code>)</p>
+<p>This renders the string</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Agent: falcon
+</span></span></code></pre></div><p>if the passed payload has a field named <code>agent_name</code>. If the passed payload doesn&rsquo;t have a <code>agent_name</code>, then this line not rendered. Be sure add a <code>-</code> in the end of the template closer, to remove any empty lines in the rendered content.</p>
+<h3 id="timestamptostring">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#timestamptostring" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>timestampToString</code></span>
+  </h3><p>This function is used to convert unix timestamp to RFC1123 format.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${timestampToString $root.data.item.last_activated_timestamp}
+</span></span></code></pre></div><p>renders as <code>Mon, 01 Jun 2020 16:42:03 IST</code>.</p>
+<h3 id="converttimestamp">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#converttimestamp" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>convertTimestamp</code></span>
+  </h3><p>This function is used to convert timestamp from one format to another.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${convertTimestamp &#34;2021-07-30T12:56:23Z05:30&#34; &#34;2006-01-02T15:04:05Z07:00&#34; &#34;Mon, 02 Jan 2006 15:04:05 -0700&#34;}
+</span></span></code></pre></div><p>renders as <code>Fri, 30 Jul 2021 12:56:23 +0530</code>.</p>
+<h3 id="html2markdown">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#html2markdown" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>html2markdown</code></span>
+  </h3><p>This function is used to convert html to markdown.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${$d := html2markdown &#34;&lt;h1&gt;Html to markdown&lt;/h1&gt;&#34;}
+</span></span></code></pre></div><p>renders as <code>#Html to markdown</code>.</p>
+<h3 id="renamedmatches">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#renamedmatches" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>reNamedMatches</code></span>
+  </h3><p>This function is used to extract out the named matches from a string using a regex.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${with $matches := (reNamedMatches &#34;^(?P&lt;user&gt;[a-z]+)@.*$&#34; &#34;example@example.com&#34;)}
+</span></span><span class="line"><span class="cl">Username: ${$matches.user}
+</span></span><span class="line"><span class="cl">${end}
+</span></span></code></pre></div><p>yields :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">User: example
+</span></span></code></pre></div><h3 id="reverse">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#reverse" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>reverse</code></span>
+  </h3><p>This function is used to reverse the passed arbitrary array (<code>[]interface{}</code>).</p>
+<p><strong>Example Usage</strong></p>
+<p>Say the payload is</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;matches&#34;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;Eve&#34;</span><span class="p">,</span> <span class="s2">&#34;Bob&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>the following template</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${with $rev := (reverse $root.matches)}
+</span></span><span class="line"><span class="cl"> + ${$rev}
+</span></span><span class="line"><span class="cl">${end}
+</span></span></code></pre></div><p>should yield</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+ Bob
+</span></span><span class="line"><span class="cl">+ Eve
+</span></span><span class="line"><span class="cl">+ John
+</span></span></code></pre></div><h3 id="divide">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#divide" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>divide</code></span>
+  </h3><p>This function is used to 2 floats and yield a float. (all <code>float64</code>s)</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${divide 840 2}
+</span></span></code></pre></div><h3 id="tojsonindent">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#tojsonindent" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>toJSONIndent</code></span>
+  </h3><p>This function is similar to <code>toJSON</code>, but adds an indentation spaces (4 spaces) at every level to the JSON output.</p>
+<p><strong>Example Usage</strong></p>
+<p>Say the <code>$pl</code> variable in the template is a Go map.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;instance-id&#34; : &#34;i-1239hd9&#34;
+</span></span><span class="line"><span class="cl">&#34;state&#34; : &#34;running&#34;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${toJSONIndent $pl}
+</span></span></code></pre></div><p>should yield</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;instance-id&#34;</span><span class="p">:</span> <span class="s2">&#34;i-1239hd9&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;state&#34;</span><span class="p">:</span> <span class="s2">&#34;running&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="dehtml">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#dehtml" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>dehtml</code></span>
+  </h3><p>This template function is used to convert the HTML escape sequence in a string and return the resulting string. This is used in <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/kapacitor/manifest.yaml#L24" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Kapacitor</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> alert source definition where the alert details are sent in a HTML escaped JSON string (for some reason).</p>
+<p><strong>Example Usage</strong></p>
+<p>Say <code>$h</code> is a variable that contains a HTML escaped string, with the following content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&amp;#34;Name&amp;#34;:&amp;#34;mem&amp;#34;}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${dehtml $h}
+</span></span></code></pre></div><p>should yield</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&#34;Name&#34;:&#34;mem&#34;}
+</span></span></code></pre></div><h3 id="join">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#join" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>join</code></span>
+  </h3><p>This template function is used to join string values with a passed string as the seperator.</p>
+<p><strong>Example Usage</strong></p>
+<p>Say <code>$hosts</code> has the following value. (in JSON)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ingester-586d87769c-bh26t&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ingester-586d87769c-n22bh&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ingester-586d87769c-tfdd6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ingester-586d87769c-tkkjb&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${join $hosts &#34;, &#34;}
+</span></span></code></pre></div><p>should yield</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ingester-586d87769c-bh26t, ingester-586d87769c-n22bh, ingester-586d87769c-tfdd6, ingester-586d87769c-tkkjb
+</span></span></code></pre></div><h3 id="replace">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#replace" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>replace</code></span>
+  </h3><p>This template function is used to replace a specific string from the input string with another string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${replace &#34;Banana&#34; &#34;na&#34; &#34;s&#34;}
+</span></span></code></pre></div><p>should yield <code>Bass</code></p>
+<h3 id="urlqueryescape">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#urlqueryescape" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>urlQueryEscape</code></span>
+  </h3><p>This template function is used to escape a passed in string so that it can be used
+in the query part of the string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${urlQueryEscape &#34;This is a testing query value&#34;}
+</span></span></code></pre></div><p>should yield <code>This+is+a+testing+query+value</code></p>
+<h3 id="emptystringifnil">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#emptystringifnil" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>emptyStringIfNil</code></span>
+  </h3><p>This template function returns an empty string if a nil value is passed. This is used as a null
+alternative when the payloads can contain null values, as handling empty string is safer than null.</p>
+<p><strong>Example Usage</strong></p>
+<p>Consider this payload</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;Bob&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${emptyStringIfNil $root.age}
+</span></span></code></pre></div><p>will yield <code>&quot;&quot;</code> (nothing will be rendered).</p>
+<h3 id="hasprefix">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#hasprefix" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>hasPrefix</code></span>
+  </h3><p>This template function is used to check if the passed string contains the prefix passed.</p>
+<p><strong>Example Usage</strong></p>
+<p>Consider this payload</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;Bob Saget&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${hasPrefix $root.name &#34;Bob&#34;}
+</span></span></code></pre></div><p>will yield <code>true</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${hasPrefix $root.name &#34;John&#34;}
+</span></span></code></pre></div><p>will yield <code>false</code>.</p>
+<h3 id="rereplace">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#rereplace" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>reReplace</code></span>
+  </h3><p>This template function is used to replace the substrings of the parent string which matches
+the passed regular expression with the replacement string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${reReplace &#34;Banana&#34; &#34;n.&#34; &#34;l&#34;}
+</span></span></code></pre></div><p>will yield <code>Ball</code>.</p>
+<h3 id="repeat">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#repeat" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>repeat</code></span>
+  </h3><p>This template function is used to repeat a specific string <code>n</code> times.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${repeat &#34;Na&#34; 5}
+</span></span></code></pre></div><p>will yield <code>NaNaNaNaNa</code>.</p>
+<h3 id="split">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#split" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>split</code></span>
+  </h3><p>This template function is used to split a string into multiple substrings by the passed separator string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${split &#34;Banana&#34; &#34;n&#34;}
+</span></span></code></pre></div><p>will yield an Array <code>[Ba,a,a]</code>.</p>
+<h3 id="trimprefix">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#trimprefix" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span><code>trimPrefix</code></span>
+  </h3><p>This template function is used to trim any prefix from the original string.</p>
+<p><strong>Example Usage</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${trimPrefix &#34;Banana&#34; &#34;Ba&#34;}
+</span></span></code></pre></div><p>will yield <code>nana</code>.</p>
+</article>
+      </div>
+    </main>
+
+    <footer class="DocsFooter">
+  <div class="DocsFooter--content">
+    <div>
+      <span class="DocsFooter--edit-on-gh-link-wrapper"><a href="https://github.com/SquadcastHub/developer.squadcast.com/blob/production/content/build-integrations/template-functions.md" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Edit on GitHub</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></span>
+
+      <span class="DocsFooter--content-dot-spacer">
+        &nbsp; · &nbsp;
+      </span>
+
+      <span class="DocsFooter--content-time">
+        Updated <time
+  class="relative"
+  datetime=2022-07-19T12:31:33&#43;05:30
+  title=2022-07-19
+>July 19, 2022</time>
+      </span>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

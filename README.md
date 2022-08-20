@@ -1,6 +1,6 @@
 # Squadcast Developer Docs
 
-**[View the docs →](https://developer.squadcast.com/)**
+**[View the docs →](https://developers.squadcast.com/)**
 
 Note: This devoloper portal is inspired from Cloudflare developer portal and we have forked [their repository](https://github.com/cloudflare/cloudflare-docs) to create this.
 
@@ -48,7 +48,7 @@ $ npm run format
 
 ### Deployment
 
-Our docs are deployed using [Cloudflare Pages](https://pages.cloudflare.com). Every commit pushed to production will automatically deploy to [developer.squadcast.com](https://developer.squadcast.com), and any pull requests opened will have a corresponding staging URL available in the pull request comments.
+Our docs are deployed using [Cloudflare Pages](https://pages.cloudflare.com). Every commit pushed to production will automatically deploy to [developers.squadcast.com](https://developers.squadcast.com), and any pull requests opened will have a corresponding staging URL available in the pull request comments.
 
 ### License and Legal Notices
 
