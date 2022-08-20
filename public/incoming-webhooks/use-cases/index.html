@@ -16,19 +16,19 @@
 
 <meta name="description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it." />
 
-<meta property="og:image" content="https://squadcast-devoloper-portalx.pages.dev/cf-twitter-card.png"/>
+<meta property="og:image" content="https://developers.squadcast.com"/>
 <meta property="og:title" content="Use cases"/>
 <meta property="og:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
 <meta property="og:type" content="website"/>
 
 <meta name="twitter:title" content="Use cases"/>
-<meta name="twitter:image" content="https://squadcast-devoloper-portalx.pages.dev/cf-twitter-card.png"/>
+<meta name="twitter:image" content="https://developers.squadcast.com"/>
 <meta name="twitter:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
 <meta name="twitter:creator" content="@SquadcastHub"/>
 <meta name="twitter:card" content="summary_large_image"/>
 
 <link rel="icon" href="/favicon-32x32.png"/>
-<link rel="canonical" href="https://squadcast-devoloper-portalx.pages.dev/incoming-webhooks/use-cases/"/>
+<link rel="canonical" href="https://developers.squadcast.com/incoming-webhooks/use-cases/"/>
 <link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
 
@@ -39,7 +39,7 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
 <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
 <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
-<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><script src="/search.redirect.min.fc262af9a6d0e2c5e49ad9c520f03c9b.js" defer></script><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
     <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
     <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
@@ -89,7 +89,7 @@
   <a aria-current="page" class="DocsMobileTitleHeader--logo-link Link Link-without-underline" href="/incoming-webhooks/">
     <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
       <div class="DocsNavLogoLockup--logo">
-        <span title="Squadcast Incoming-Webhooks logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M21.25,3.84H16.77l1.79-1.79H16.4L13.86,4.59,16.4,7.14h2.16l-1.79-1.8h4.48a.75.75,0,0,0,0-1.5Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></span>
+        <span title="Squadcast Incoming-Webhooks logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M21.25,3.84H16.77l1.79-1.79H16.4L13.86,4.59,16.4,7.14h2.16l-1.79-1.8h4.48a.75.75,0,0,0,0-1.5Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></span>
       </div>
 
       <span class="DocsNavLogoLockup--text">
@@ -129,7 +129,7 @@
       <a aria-current="page" class="DocsSidebar--docs-title-logo-link DocsSidebar--link" href="/incoming-webhooks/">
         <div class="DocsNavLogoLockup">
           <div class="DocsNavLogoLockup--logo">
-            <span title="Squadcast Incoming Webhooks logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#a5cbfa;}</style></defs><path class="cls-1" d="M21.25,3.84H16.77l1.79-1.79H16.4L13.86,4.59,16.4,7.14h2.16l-1.79-1.8h4.48a.75.75,0,0,0,0-1.5Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></span>
+            <span title="Squadcast Incoming Webhooks logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M21.25,3.84H16.77l1.79-1.79H16.4L13.86,4.59,16.4,7.14h2.16l-1.79-1.8h4.48a.75.75,0,0,0,0-1.5Z"/><path class="cls-1" d="M10.05,12.71c-.71,1.2-1.4,2.36-2.1,3.52a.94.94,0,0,0-.12.91,1.71,1.71,0,0,1-1.21,2.33A1.74,1.74,0,0,1,4.47,18a1.78,1.78,0,0,1,1.58-2l.33,0L8,13.35A4.31,4.31,0,0,1,6.5,9.79,4,4,0,0,1,7.71,7.2a4.12,4.12,0,0,1,5.14-.54,4,4,0,0,1,1.67,4.65l-1.43-.39a2.73,2.73,0,0,0-.58-2.49,2.54,2.54,0,0,0-4.33,1c-.4,1.35.21,2.46,1.87,3.3Z"/><path class="cls-1" d="M12.09,11.29c.51.88,1,1.79,1.53,2.68a4.17,4.17,0,0,1,5.18,2.14,4.13,4.13,0,0,1-1.38,5.14,4.07,4.07,0,0,1-5.31-.53l1.17-1c1.48,1,2.77.91,3.73-.22a2.58,2.58,0,0,0,0-3.35c-1-1.09-2.28-1.13-3.85-.08-.65-1.16-1.31-2.3-1.94-3.47a1.19,1.19,0,0,0-.93-.7,1.65,1.65,0,0,1-1.35-1.6A1.76,1.76,0,0,1,10,8.6a1.74,1.74,0,0,1,2,.54,1.64,1.64,0,0,1,.3,1.62c-.05.17-.13.33-.21.53Z"/><path class="cls-1" d="M13.3,18.55H10.21a4.2,4.2,0,0,1-2,2.82,4.13,4.13,0,0,1-2.76.49A4.2,4.2,0,0,1,2,18.11a4.15,4.15,0,0,1,3.18-4.33l.39,1.43c-1.74.89-2.34,2-1.86,3.41a2.54,2.54,0,0,0,3,1.65c1.35-.26,2-1.39,2-3.19,1.28,0,2.57,0,3.85,0a1.39,1.39,0,0,0,1.26-.48,1.67,1.67,0,0,1,2.44,0A1.75,1.75,0,1,1,13.67,19c-.13-.14-.24-.32-.37-.49Z"/></svg></span>
           </div>
 
           <span class="DocsNavLogoLockup--text">
@@ -152,9 +152,11 @@
 
         <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
           <ul class="Dropdown--list"><li class="Dropdown--item">
-                <a class="Dropdown--link" href="https://api.cloudflare.com/" tabindex="-1">Full API docs</a>
+                <a class="Dropdown--link" href="https://apidocs.squadcast.com/" tabindex="-1">Full API docs</a>
               </li><li class="Dropdown--item">
-                <a class="Dropdown--link" href="https://cloudflare.com" tabindex="-1">Cloudflare homepage</a>
+                <a class="Dropdown--link" href="https://support.squadcast.com" tabindex="-1">Support docs</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://squadcast.com" tabindex="-1">Squadcast homepage</a>
               </li></ul>
         </div>
       </div>

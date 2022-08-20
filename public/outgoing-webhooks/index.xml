@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quickstart on Squadcast Developers</title>
-    <link>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/</link>
+    <link>https://developers.squadcast.com/outgoing-webhooks/</link>
     <description>Recent content in Quickstart on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://developers.squadcast.com/outgoing-webhooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Payload format</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/payload-format/</link>
+      <link>https://developers.squadcast.com/outgoing-webhooks/payload-format/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/payload-format/</guid>
+      <guid>https://developers.squadcast.com/outgoing-webhooks/payload-format/</guid>
       <description>Webhook Payloads &amp;#8203;​ Incident Triggered { &amp;#34;id&amp;#34;: &amp;#34;61c075f78589dca75fdb2f44&amp;#34;, &amp;#34;event_type&amp;#34;: &amp;#34;incident_triggered&amp;#34;, &amp;#34;organization&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;609b8e9978d2770008db8638&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;My Org&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61518af788792704697f3da0&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;email trigger&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;email-trigger&amp;#34; }, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;5fae6d03ef87d3896aa92ad1&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;message&amp;#34;: &amp;#34;CPU Throttling: Over 90% of cpu is being utilized&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Over 90% of cpu is being utilized from the past 2 hours which is a drastic increase from before. Please checkout the metrics.</description>
     </item>
     
     <item>
       <title>Use cases</title>
-      <link>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/use-cases/</link>
+      <link>https://developers.squadcast.com/outgoing-webhooks/use-cases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://squadcast-devoloper-portalx.pages.dev/outgoing-webhooks/use-cases/</guid>
+      <guid>https://developers.squadcast.com/outgoing-webhooks/use-cases/</guid>
       <description> Use-cases for outgoing WebhooksWebhooks can be leveraged in various scenarios. We have put together some common use-cases.
 Building internal custom dashboards to visualize or analyze incidents Sending data to ticketing tools, such as Zendesk, Freshdesk, Shortcut, Asana, etc. Sending events to communication apps, such as Slack, MS Teams, etc. Alerting when a workflow is disrupted- then use the API to re-run the workflow Triggering internal notification systems to alert people when incidents are created/resolved Building your own automation plug-ins and tools </description>
     </item>

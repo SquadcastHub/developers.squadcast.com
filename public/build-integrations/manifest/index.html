@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en" theme="light" is-docs-page js-focus-visible-polyfill-available>
+  <head><meta charset="utf-8">
+<title>How to write manifests?</title>
+<meta http-equiv="cleartype" content="on"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="application-name" content="How to write manifests?"/>
+<meta name="msapplication-tap-highlight" content="no"/>
+<meta name="apple-mobile-web-app-title" content="How to write manifests?"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#f38020"/>
+
+<meta name="description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it." />
+
+<meta property="og:image" content="https://developers.squadcast.com"/>
+<meta property="og:title" content="How to write manifests?"/>
+<meta property="og:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta property="og:type" content="website"/>
+
+<meta name="twitter:title" content="How to write manifests?"/>
+<meta name="twitter:image" content="https://developers.squadcast.com"/>
+<meta name="twitter:description" content="Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it."/>
+<meta name="twitter:creator" content="@SquadcastHub"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="icon" href="/favicon-32x32.png"/>
+<link rel="canonical" href="https://developers.squadcast.com/build-integrations/manifest/"/>
+<link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+
+<link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/>
+<link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/>
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
+<link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
+<link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
+    <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
+    <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
+  </head>
+  <body>
+  <div class="DocsPage"><div class="DocsMobileHeader">
+  <a class="DocsMobileHeader--cloudflare-logo-link Link Link-without-underline" href="/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo" style="width: 10%;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_) !important;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_) !important;}
+</style>
+<g id="Group-Copy">
+	
+		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF !important"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
+		<stop  offset="1" style="stop-color:#000395 !important"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
+		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
+		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
+	
+		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
+		<stop  offset="0" style="stop-color:#1F92FF !important"/>
+		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
+		<stop  offset="1" style="stop-color:#000395 !important"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
+		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
+		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
+</g>
+
+</div>
+<span class="DocsNavLogoLockup--text">
+  <span data-text="Squadcast">Squadcast </span>
+  <span data-text="Docs">Docs </span>
+</span>
+    </div>
+  </a>
+</div>
+
+<div class="DocsMobileTitleHeader">
+  <a aria-current="page" class="DocsMobileTitleHeader--logo-link Link Link-without-underline" href="/build-integrations/">
+    <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+      <div class="DocsNavLogoLockup--logo">
+        <span title="Squadcast Build-Integrations logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M16,2H12a.5.5,0,0,0-.5.5v4A.5.5,0,0,0,12,7h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,16,2Zm-.5,4h-3V3h3Z"/><path class="cls-1" d="M21.48,7.5h-4A.5.5,0,0,0,17,8v4a.5.5,0,0,0,.5.5h4A.5.5,0,0,0,22,12V8A.5.5,0,0,0,21.48,7.5Zm-.5,4H18v-3h3Z"/><path class="cls-1" d="M21.48,2h-4a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,21.48,2ZM21,6H18V3h3Z"/><path class="cls-1" d="M15.89,7.32h-4a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5h3.5v3.5a.5.5,0,0,0,.5.5.5.5,0,0,0,.5-.5v-4A.51.51,0,0,0,15.89,7.32Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></span>
+      </div>
+
+      <span class="DocsNavLogoLockup--text">
+        <span class="DocsSidebar--docs-title-text-scaler" style="--length:18">Build-Integrations</span>
+      </span>
+    </div>
+  </a>
+
+  <button class="Button DocsMobileTitleHeader--sidebar-toggle-button">
+    <span class="DocsMobileTitleHeader--sidebar-toggle-button-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-1332672649688018"
+        xmlns="http://www.w3.org/2000/svg">
+        <title id="title-1332672649688018">Navigation menu icon</title>
+        <path data-index="1" d="M5, 7h10" transform-origin="10  7"></path>
+        <path data-index="2" d="M5,10h10" transform-origin="10 10"></path>
+        <path data-index="3" d="M5,13h10" transform-origin="10 13"></path>
+      </svg>
+      <span is-visually-hidden="">Open external link</span>
+    </span>
+  </button>
+</div>
+
+<div class="DocsMobileNavBackdrop"></div><div class="DocsSidebar">
+  <div class="DocsSidebar--sections">
+    <div class="DocsSidebar--section DocsSidebar--header-section">
+      <a class="DocsSidebar--cloudflare-logo-link DocsSidebar--link" href="/">
+        <div class="DocsNavLogoLockup">
+          
+          <div class="logo-box"></div><span class="DocsNavLogoLockup--text">Squadcast Docs</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="DocsSidebar--section-separator"></div>
+
+    <div class="DocsSidebar--section DocsSidebar--docs-title-section">
+      <a aria-current="page" class="DocsSidebar--docs-title-logo-link DocsSidebar--link" href="/build-integrations/">
+        <div class="DocsNavLogoLockup">
+          <div class="DocsNavLogoLockup--logo">
+            <span title="Squadcast Build Integrations logo"><svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:##6d777b;}</style></defs><path class="cls-1" d="M16,2H12a.5.5,0,0,0-.5.5v4A.5.5,0,0,0,12,7h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,16,2Zm-.5,4h-3V3h3Z"/><path class="cls-1" d="M21.48,7.5h-4A.5.5,0,0,0,17,8v4a.5.5,0,0,0,.5.5h4A.5.5,0,0,0,22,12V8A.5.5,0,0,0,21.48,7.5Zm-.5,4H18v-3h3Z"/><path class="cls-1" d="M21.48,2h-4a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-4A.5.5,0,0,0,21.48,2ZM21,6H18V3h3Z"/><path class="cls-1" d="M15.89,7.32h-4a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5h3.5v3.5a.5.5,0,0,0,.5.5.5.5,0,0,0,.5-.5v-4A.51.51,0,0,0,15.89,7.32Z"/><path class="cls-1" d="M8.6,14.38c-.58,1-1.14,1.94-1.72,2.89a.76.76,0,0,0-.1.75,1.4,1.4,0,0,1-1,1.91A1.44,1.44,0,0,1,4,18.74a1.47,1.47,0,0,1,1.31-1.65l.26,0c.41-.7.84-1.41,1.29-2.16A3.54,3.54,0,0,1,5.69,12a3.33,3.33,0,0,1,1-2.13,3.37,3.37,0,0,1,4.21-.44,3.29,3.29,0,0,1,1.37,3.81l-1.18-.32a2.24,2.24,0,0,0-.47-2,2.09,2.09,0,0,0-3.55.8c-.33,1.11.17,2,1.53,2.71Z"/><path class="cls-1" d="M10.28,13.21l1.25,2.2a3.43,3.43,0,0,1,4.25,1.76,3.38,3.38,0,0,1-1.13,4.21A3.34,3.34,0,0,1,10.29,21l1-.8c1.21.78,2.27.74,3.06-.19a2.1,2.1,0,0,0,0-2.74c-.79-.9-1.86-.93-3.15-.07-.53-.95-1.08-1.89-1.59-2.84a1,1,0,0,0-.77-.58,1.35,1.35,0,0,1-1.1-1.31,1.43,1.43,0,0,1,2.54-1,1.37,1.37,0,0,1,.25,1.33c0,.14-.11.27-.17.43Z"/><path class="cls-1" d="M11.27,19.17H8.74a3.48,3.48,0,0,1-1.67,2.31,3.36,3.36,0,0,1-2.26.41A3.45,3.45,0,0,1,2,18.81a3.4,3.4,0,0,1,2.61-3.55c.1.39.21.78.32,1.17-1.43.73-1.93,1.65-1.53,2.8a2.09,2.09,0,0,0,2.44,1.35C7,20.36,7.52,19.44,7.45,18c1.06,0,2.11,0,3.16,0a1.18,1.18,0,0,0,1-.4,1.36,1.36,0,0,1,2,0,1.43,1.43,0,1,1-2.07,2,4.17,4.17,0,0,1-.3-.4Z"/></svg></span>
+          </div>
+
+          <span class="DocsNavLogoLockup--text">
+            <span class="DocsSidebar--docs-title-text-scaler" style="--length:18">Build Integrations</span>
+          </span>
+        </div>
+      </a>
+
+      <div class="DocsSidebar--section-more Dropdown" data-expanded="false">
+        <button class="DocsSidebar--section-more-button Button" aria-expanded="false">
+          <div class="DocsSidebar--section-more-button-icon">
+            <svg viewBox="0 0 4 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" fill="currentColor" role="img" aria-labelledby="title-6032186738345315"
+              xmlns="http://www.w3.org/2000/svg">
+              <title id="title-6032186738345315">Dropdown icon</title>
+              <path d="M2,2v0m0,6v0m0,6v0z"></path>
+            </svg>
+            <span is-visually-hidden>Build Integrations menu</span>
+          </div>
+        </button>
+
+        <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
+          <ul class="Dropdown--list"><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://squadcast.com" tabindex="-1">Squadcast homepage</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="https://support.squadcast.com" tabindex="-1">Support docs</a>
+              </li><li class="Dropdown--item">
+                <a class="Dropdown--link" href="/webhook-connectors/" tabindex="-1">Webhook connectors</a>
+              </li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="DocsSidebar--section DocsSidebar--nav-section" style="position:relative;overflow:hidden;width:100%;height:100%">
+      <div style="position: absolute; inset: 0px; overflow-y: auto; margin-right: 0px; margin-bottom: 0px;">
+        <div class="DocsSidebar--nav-section-shadow" style="opacity: 0;"></div>
+
+        <ul class="DocsSidebar--nav">
+          <li class="DocsSidebar--nav-item">
+            <a class="DocsSidebar--nav-link" href="/build-integrations/">
+              <span class="DocsSidebar--nav-link-highlight"></span>
+              <span class="DocsSidebar--nav-link-text">Overview</span>
+            </a>
+          </li>
+          <li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/build-integrations/alert-sources/">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Build Alert Sources</span>
+    </a></li><li class="DocsSidebar--nav-item" is-active><a aria-current="page" class="DocsSidebar--nav-link" href="/build-integrations/manifest/" is-active>
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">How to write manifests?</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/build-integrations/template-functions/">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Template functions</span>
+    </a></li></ul>
+      </div>
+      <div style="position:absolute;height:6px;display:none;right:2px;bottom:2px;left:2px;border-radius:3px">
+        <div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div>
+      </div>
+      <div style="position:absolute;width:6px;display:none" class="Scrollbars--track Scrollbars--track-vertical">
+        <div style="position:relative;display:block;width:100%" class="Scrollbars--thumb Scrollbars--thumb-vertical"></div>
+      </div>
+    </div>
+  </div>
+  <div class="DocsSidebar--shadow"></div>
+</div><div class="DocsToolbar"><div class="DocsToolbar--search CoveoSearchInterface">
+  <div class="DocsSearch">
+    <div class="DocsSearch--input-wrapper">
+      
+
+      <div class="DocsSearch--input-icon">
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+<div class="DocsToolbar--tools">
+  
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--tools-icon-item">
+    <div class="Tooltip---root">
+      <div class="DocsToolbar--tools-icon-item-content">
+        <a class="Link Link-without-underline" href="https://github.com/SquadcastHub/developers.squadcast.com">
+          <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6991762763429039" xmlns="http://www.w3.org/2000/svg">
+            <title id="title-6991762763429039">GitHub icon</title>
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+
+      <span class="Tooltip" role="tooltip" position="bottom-end">
+        Visit Build Integrations on GitHub
+      </span>
+    </div>
+  </div>
+
+  <div class="DocsToolbar--tools-spacer"></div>
+
+  <div class="DocsToolbar--theme-toggle"><div class="Tooltip---root">
+  <div class="ThemeToggle">
+    <input type="checkbox" id="ThemeToggle" class="ThemeToggle--input">
+
+    <label class="ThemeToggle--toggle" for="ThemeToggle">
+      <div class="ThemeToggle--toggle-handle"></div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--sun">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-8812071124069258" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-8812071124069258">Light theme icon (depiction of a sun)</title>
+          <path d="M7.5 11.465a3.482 3.482 0 01-1.596-.662L4.11 12.596a.5.5 0 01-.707-.707l1.793-1.793A3.482 3.482 0 014.535 8.5H2a.5.5 0 010-1h2.535a3.482 3.482 0 01.662-1.596L3.404 4.11a.5.5 0 01.707-.707l1.793 1.793A3.482 3.482 0 017.5 4.535V2a.5.5 0 011 0v2.535a3.482 3.482 0 011.596.662l1.793-1.793a.5.5 0 01.707.707l-1.793 1.793c.343.458.577 1.003.662 1.596H14a.5.5 0 110 1h-2.535a3.482 3.482 0 01-.662 1.596l1.793 1.793a.5.5 0 01-.707.707l-1.793-1.793a3.482 3.482 0 01-1.596.662V14a.5.5 0 11-1 0v-2.535z"></path>
+        </svg>
+      </div>
+
+      <div class="ThemeToggle--toggle-handle-icon ThemeToggle--moon">
+        <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-5971296394189265" xmlns="http://www.w3.org/2000/svg">
+          <title id="title-5971296394189265">Dark theme icon (depiction of a moon)</title>
+          <path d="M7.067 3.087a5 5 0 005.466 7.026 5 5 0 11-5.466-7.026z"></path>
+        </svg>
+      </div>
+    </label>
+
+    <span class="Tooltip" role="tooltip" position="bottom-end">Set theme to dark (⇧+D)</span>
+  </div>
+</div></div>
+</div></div>
+
+    <main class="DocsBody">
+      <div class="DocsBody--sidebar" with-styled-webkit-scrollbars="">
+  <div class="DocsBody--sidebar-content-scroll-fade"></div>
+  <div class="DocsBody--sidebar-content">
+      <ul class="DocsTableOfContents" hidden>
+        <li><a class="DocsTableOfContents-link" href="#docs-content">↑ Top</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+      <div id="docs-content" data-reach-skip-nav-content></div>
+
+      <div class="DocsContent" page-type="document">
+        <article class="DocsMarkdown">
+  <h1 id="how-to-write-manifests">How to write manifests?</h1><h2 id="topic-of-contents">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#topic-of-contents" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Topic of Contents</span>
+  </h2><ul>
+<li><a href=#manifest-explained class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Manifest explained</span></a>
+<ul>
+<li><a href=#unwantedunused-fields class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Unwanted/Unused fields</span></a>
+<ul>
+<li><a href=#kind class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">kind</span></a></li>
+</ul>
+</li>
+<li><a href=#fields-used-only-for-ui-use-cases class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Fields used only for UI use cases</span></a>
+<ul>
+<li><a href=#type class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">type</span></a></li>
+<li><a href=#heading class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">heading</span></a></li>
+<li><a href=#supportdoc class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">supportDoc</span></a></li>
+<li><a href=#displaykeyonly class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">displayKeyOnly</span></a></li>
+</ul>
+</li>
+<li><a href=#fields-used-for-deprecation-notices-in-ui class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Fields used for deprecation notices in UI</span></a>
+<ul>
+<li><a href=#deprecated class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">deprecated</span></a></li>
+<li><a href=#deprecationmessage class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">deprecationMessage</span></a></li>
+</ul>
+</li>
+<li><a href=#fields-actually-used-by-ingester-for-processing class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Fields actually used by <code>ingester</code> for processing</span></a>
+<ul>
+<li><a href=#version class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">version</span></a></li>
+<li><a href=#isnative class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">isNative</span></a></li>
+<li><a href=#shortname class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">shortName</span></a></li>
+<li><a href=#isvalid class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">isValid</span></a></li>
+<li><a href=#isbatched class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">isBatched</span></a></li>
+<li><a href=#arrayselector class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">arraySelector</span></a>
+<ul>
+<li><a href=#how-does-the-processing-happen class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">How does the processing happen?</span></a></li>
+</ul>
+</li>
+<li><a href=#eventindicator class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">eventIndicator</span></a></li>
+<li><a href=#message class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">message</span></a></li>
+<li><a href=#description class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">description</span></a></li>
+<li><a href=#isprivate class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">isPrivate</span></a></li>
+<li><a href=#hideautomation class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">hideAutomation</span></a></li>
+<li><a href=#metadata class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">metadata</span></a></li>
+<li><a href=#helpertemplates class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">helperTemplates</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=#best-practices-for-writing-message-and-description-templates class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Best practices for writing message and description templates</span></a>
+<ul>
+<li><a href=#incident-message class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Incident Message</span></a></li>
+<li><a href=#incident-description class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Incident Description</span></a></li>
+</ul>
+</li>
+<li><a href=#further-reference class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">Further Reference</span></a></li>
+</ul>
+<h2 id="manifest-explained">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#manifest-explained" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Manifest explained</span>
+  </h2><p><strong>Example used</strong> : <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/prometheus/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Prometheus</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">AlertSource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">isNative</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Prometheus</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">shortName</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">isValid</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">isBatched</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">arraySelector</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${$root.alerts}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">eventIndicator</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.status}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">events</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">firing</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;trigger&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">eventID</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.labels.alertname}-${.labels.severity}-${.startsAt}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">resolved</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;resolve&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">eventID</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.labels.alertname}-${.labels.severity}-${.startsAt}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;[${.labels.severity}] ${.labels.alertname}${if .annotations.summary} ${.annotations.summary}${end}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${ range $key,$val := .annotations -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${capitalize (unsnake $key)}: ${$val}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${end -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    Labels
+</span></span></span><span class="line"><span class="cl"><span class="sd">      ${ range $key,$val := .labels -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">      ${capitalize (unsnake $key)}: ${$val}
+</span></span></span><span class="line"><span class="cl"><span class="sd">      ${end -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    Generator URL: ${.generatorURL -}</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">heading</span><span class="p">:</span><span class="w"> </span><span class="l">Prometheus Webhook URL</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">supportDoc</span><span class="p">:</span><span class="w"> </span><span class="l">https://support.squadcast.com/docs/prometheus</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">displayKeyOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">deprecationMessage</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">isPrivate</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hideAutomation</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><h3 id="unwantedunused-fields">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#unwantedunused-fields" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Unwanted/Unused fields</span>
+  </h3><h4 id="kind">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#kind" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>kind</span>
+  </h4><p><code>kind</code> field can be ignored. Inspired from kubernetes manifests, this serves no purpose as of now.</p>
+<hr>
+<h3 id="fields-used-only-for-ui-use-cases">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#fields-used-only-for-ui-use-cases" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Fields used only for UI use cases</span>
+  </h3><h4 id="type">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#type" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>type</span>
+  </h4><p><code>type</code> stores the name of the alert source used for display purposes in the UI.</p>
+<hr>
+<h4 id="heading">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#heading" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>heading</span>
+  </h4><p>This contains the label to be shown in the UI beside the alert source integration details.</p>
+<hr>
+<h4 id="supportdoc">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#supportdoc" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>supportDoc</span>
+  </h4><p>This contains the documentation URL for the alert source which helps users configure the specific alert source.</p>
+<hr>
+<h4 id="displaykeyonly">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#displaykeyonly" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>displayKeyOnly</span>
+  </h4><p>For some alert sources only the service API key should be displayed. Right now only <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/sensu/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Sensu</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+(not to be confused with <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/sensu-go/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Sensu Go</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>)
+needs this field to be true. Use of this field is discouraged. When a external monitoring or alerting system requires
+small scripts to be written to send alerts to Squadcast, always ask for webhook URL as the configuration and not an API Key.</p>
+<hr>
+<h3 id="fields-used-for-deprecation-notices-in-ui">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#fields-used-for-deprecation-notices-in-ui" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Fields used for deprecation notices in UI</span>
+  </h3><h4 id="deprecated">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#deprecated" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>deprecated</span>
+  </h4><p>This field specifies if the specific alert source will be deprecated <strong>soon</strong>.</p>
+<hr>
+<h4 id="deprecationmessage">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#deprecationmessage" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>deprecationMessage</span>
+  </h4><p>This field specifies the message to be displayed in the frontend if an alert source is marked as <a href=#deprecated class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>deprecated</code></span></a>.</p>
+<hr>
+<h3 id="fields-actually-used-for-processing">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#fields-actually-used-for-processing" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Fields actually used for processing</span>
+  </h3><h4 id="version">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#version" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>version</span>
+  </h4><p><code>version</code> stores the version of the alert source manifest definition. This was first introduces for the
+<a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/api/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>APIv2</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> to replace the old <strong>API v1</strong> endpoint.</p>
+<p><strong>Why?</strong>:</p>
+<p>The old <strong>API v1</strong> endpoint didn&rsquo;t make any sense: <code>https://api.squadcast.com/v1/incidents/create/API_KEY</code>.
+We need to change the endpoint without the affecting the existing customers.
+We just introduced a new endpoint called <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/api/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>APIv2</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>, where the endpoint was different and supported
+resolution and tags from the payload.</p>
+<p>If the new endpoint had been <code>/v1/incidents/api</code>, it would have raised doubts regarding what the difference was.
+Almost all other alert sources will be <code>v1</code>.</p>
+<p><strong>Note about Zabbix</strong></p>
+<p>In case of <strong>Zabbix</strong> we support two different versions and they are created as different alert sources.</p>
+<ul>
+<li><a href=../manifests/zabbix-4/zabbix-4.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Zabbix 4.x</strong></span></a></li>
+<li><a href=../manifests/zabbix-5.0/zabbix-5.0.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Zabbix 5.x</strong></span></a></li>
+</ul>
+<hr>
+<h4 id="isnative">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#isnative" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>isNative</span>
+  </h4><p><code>isNative</code> specifies if the alert source is a native alert source.
+<a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/api/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>APIv2</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>, <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/squadcastui/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>SquadcastUI</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+and the now deprecated <strong>API v1</strong> are classified as native (<code>isNative</code> - <code>true</code>).</p>
+<p>For external alert sources this can be left as <code>false</code>.</p>
+<hr>
+<h4 id="shortname">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#shortname" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>shortName</span>
+  </h4><p><code>shortName</code> is the actual slug version of the alert source used in the webhook endpoints.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://api.squadcast.com/v1/incidents/prometheus/API_KEY
+</span></span><span class="line"><span class="cl">                                       ^^^^^^^^^^
+</span></span></code></pre></div><p><code>shortName</code> is constructed by lowercasing all the letters of the alert source name and replacing
+all the spaces with a <code>-</code>.</p>
+<p><strong>Example</strong></p>
+<ul>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch-event-rules/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Amazon Cloudwatch Event Rules</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> =&gt; <code>amazon-cloudwatch-event-rules</code></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/freshping/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Freshping</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> =&gt; <code>freshping</code></li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong>: Once an alert source is deployed, DO NOT change its shortName. shortName is used in constructing the webhook url. Any changes made would break the existing ones configured by customers. Incase if you have to, then make sure that the appropriate communication is done to the customer well in advance before deployment.</p>
+</blockquote>
+<hr>
+<h4 id="isvalid">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#isvalid" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>isValid</span>
+  </h4><p><code>isValid</code> field is a compatibility field for the old data records. But this is also useful when an
+alert source is supposed to be deprecated.</p>
+<hr>
+<h4 id="isbatched">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#isbatched" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>isBatched</span>
+  </h4><p><code>isBatched</code> specifies whether an alert source sends batch of alerts in a single request/payload.
+See <a href=#arraySelector class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>arraySelector</code></span></a> for more.</p>
+<hr>
+<h4 id="arrayselector">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#arrayselector" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>arraySelector</span>
+  </h4><p><code>arraySelector</code> defines the field path in the payload through the template which has the data of all the
+alerts in case of batched alert sources. For example in <a href=../manifests/prometheus/prometheus.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Prometheus</strong></span></a>, the alerts field in the root of
+the payload contains the details of all the batched alerts as JSON objects.</p>
+<p>Right now only the following alert sources batches alerts.</p>
+<ul>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/prometheus/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Prometheus</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/sqreen/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Sqreen</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+</ul>
+<h5 id="how-does-the-processing-happen">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#how-does-the-processing-happen" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>How does the processing happen?</span>
+  </h5><p><strong>Ingester</strong> (our alert ingestion engine) processes for the all the templates (like <code>message</code>, <code>description</code> and <code>eventIndicator</code>)
+for all the alerts described by the <code>arraySelector</code> field. When every alert is processed, fields inside
+the specific alert&rsquo;s JSON can be accessed using <code>.</code> in the templates. If there is any field that is needed
+to be accessed which is from the <strong>root</strong> of the payload, it can be accessed through <code>$root</code>.</p>
+<p>Take this alert for example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;alerts&#34;</span> <span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;metric&#34;</span><span class="p">:</span><span class="s2">&#34;cpu.rss&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;condition&#34;</span><span class="p">:</span><span class="s2">&#34;avg(host.cpu.rss{2m}) &gt;= 50&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;message&#34;</span><span class="p">:</span><span class="s2">&#34;RSS CPU usage of process is the above configured threshold&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;metric&#34;</span><span class="p">:</span><span class="s2">&#34;iops&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="mi">240</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;condition&#34;</span><span class="p">:</span><span class="s2">&#34;avg(host.iops{2m}) &gt; 200&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;message&#34;</span><span class="p">:</span><span class="s2">&#34;IOPS usage of system is above the configured threshold&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">],</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;host&#34;</span><span class="p">:</span><span class="s2">&#34;mongo-sh*t-shard-01&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;cluster&#34;</span><span class="p">:</span><span class="s2">&#34;main-prod-us-west-2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;timestamp&#34;</span><span class="p">:</span><span class="mi">1606670617</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This alert contains the 2 separate alerts for a single host.</p>
+<ul>
+<li>One is regarding a metric called <code>cpu.rss</code>.</li>
+<li>Another is regarding the metric called <code>iops</code>.</li>
+</ul>
+<p><em>Assume we have decided to process the alerts into seperate incidents*</em></p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Need to show the <code>message</code> field inside the each alert as incident message for all the alerts.</li>
+<li>Need to show which <code>host</code> and the <code>cluster</code>, the alert is for and when it happened in the incident description.</li>
+<li>Need to show other alert details as well in the description.</li>
+</ul>
+<p>The template will be as follows:</p>
+<p><strong>Incident Message</strong> : <code>${.message}</code></p>
+<p><strong>Incident Description</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">**Host** : ${$root.host}
+</span></span><span class="line"><span class="cl"><span class="gs">**Cluster**</span> : ${$root.cluster}
+</span></span><span class="line"><span class="cl"><span class="gs">**Timestamp**</span> : ${$root.timestamp}
+</span></span><span class="line"><span class="cl"><span class="gs">**Metric**</span> : ${.metric}
+</span></span><span class="line"><span class="cl"><span class="gs">**Current Metric Value**</span> : ${.value}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gs">**Condition**</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```
+</span></span></span><span class="line"><span class="cl"><span class="s"></span>${.condition}
+</span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span></code></pre></div><blockquote>
+<p>In the above templates you can see that the alert local (or specific) data can be accessed using a <code>.</code> like <code>${.metric}</code>.
+But the payload global data is accessed through <code>$root</code>.</p>
+</blockquote>
+<p>For a simple pseudo code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="o">.</span> <span class="ow">in</span> <span class="err">$</span><span class="n">root</span><span class="o">.</span><span class="n">alerts</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">	<span class="n">executeTemplate</span><span class="p">(</span><span class="n">eventIndicator</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">executeTemplate</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">executeTemplate</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">	<span class="n">createIncident</span><span class="p">()</span>
+</span></span></code></pre></div><hr>
+<h4 id="eventindicator">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#eventindicator" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>eventIndicator</span>
+  </h4><p><code>eventIndicator</code> is a configuration object which helps ingester identify whether the incoming payload is
+a <strong>triggering</strong> payload or a <strong>resolving</strong> payload.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.status}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">events</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">firing</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;trigger&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">eventID</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.labels.alertname}-${.labels.severity}-${.startsAt}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">resolved</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;resolve&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">eventID</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${.labels.alertname}-${.labels.severity}-${.startsAt}&#34;</span><span class="w">
+</span></span></span></code></pre></div><p><code>key</code> field is a template which defines which data should to be extracted from the payload. This data is checked
+against the <code>events</code> map. This is also <strong>alert local</strong> in case of batched alerts. Take <strong>prometheus</strong>
+payload for example. Every alert in the <code>$root.alerts</code> array in the JSON payload has a <code>status</code> field.
+The value of this field defines if that alert is a <strong>triggering</strong> or <strong>resolving</strong> signal. If the <code>status</code> field in an alert
+is <code>firing</code> then this is taken as a <strong>trigger</strong> signal. If it is <code>resolved</code> then that alert is taken as a <strong>resolve</strong>.
+signal.</p>
+<blockquote>
+<p>NOTE: Event indicator templates should always yield lowercase string. As it is very easy to confuse a <code>Resolve</code> with a <code>resolve</code> event in the <code>events</code> definition.
+Always convert the resulting string to a lower case using <code>toLower</code> template function.</p>
+</blockquote>
+<p><code>events</code> contains the mapping of payload <code>key</code> value and the signal it should be interpreted as.</p>
+<p><code>action</code> specifies what action to be taken when the evaluated <code>key</code> template matches a configuration in mapping.</p>
+<p>There are 3 types of <code>action</code> as of now.</p>
+<ul>
+<li><code>trigger</code> - Triggers an incident in Squadcast.</li>
+<li><code>resolve</code> - Resolves an incident/incidents with the same <code>eventID</code>s.</li>
+<li><code>custom</code> - This is a No-op w.r.t. to Squadcast. But custom logic can be executed here depending on the alert source.</li>
+</ul>
+<p><strong>Why <code>custom</code> action</strong></p>
+<p>Refer to any alert source which utilizes Amazon SNS to send alert payloads or <code>Test</code> based payloads.</p>
+<p><strong>SNS based alert sources</strong></p>
+<p>AWS SNS is a service which specializes in data delivery to different types of destinations.
+It requires a verification step while setting it up. The first time a AWS SNS Subscription
+is created for a Topic, SNS sends a verification payload. This contains a verification URL
+much like product sign-up email. A <code>GET</code> request to this URL should be made for the subscription to
+activate and send alerts to Squadcast. In the <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch/payload/cloudwatch_confirmation.json" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">initial payload</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> the Subscription URL will
+be in the, aptly named, field called <code>SubscribeURL</code>.</p>
+<ul>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudtrail-cloudwatch/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>AWS CloudTrail via Cloudwatch</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch-event-rules/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>AWS Cloudwatch Event Rules</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudwatch/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>AWS CloudWatch</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/cloudtrail-logs/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>AWS CloudTrail Logs via SNS</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+</ul>
+<p><strong>Test based alert sources</strong></p>
+<p>These alert sources send alerts with test signal. In those cases nothing is left to be done
+from our end.</p>
+<ul>
+<li><a href=../manifests/opmanager/opmanager.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>ManageEngine OpManager</strong></span></a></li>
+<li><a href=../manifests/statuscake/statuscake.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>StatusCake</strong></span></a></li>
+</ul>
+<p><code>eventID</code> specifies the template with which a semi-unique event identifier is generated for a reference when a
+alert is a <strong>triggering</strong> alert. Same key is evaluated when a resolve signal comes in and the incident with the
+same event identifier is resolved.</p>
+<p><strong>For example</strong>:</p>
+<p>Say an event with the following data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;message&#34;</span> <span class="p">:</span> <span class="s2">&#34;Some incident&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;description&#34;</span> <span class="p">:</span> <span class="s2">&#34;Some description&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;event_id&#34;</span> <span class="p">:</span> <span class="s2">&#34;23ehjdb8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;event_type&#34;</span> <span class="p">:</span> <span class="s2">&#34;firing&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>For the above payload, we will be creating an incident and associate an <code>eventID</code> from the field <code>event_id</code>. In this
+case this will be <code>23ehjdb8</code>. (eventID will be defined in the manifest as <code>${$root.event_id}</code>).</p>
+<p>Now when a new event comes in:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;event_id&#34;</span> <span class="p">:</span> <span class="s2">&#34;23ehjdb8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;event_type&#34;</span> <span class="p">:</span> <span class="s2">&#34;resolved&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We will evaluate the <code>eventID</code> template from the manifest for the resolving signal. Which will, again, be <code>${$root.event_id}</code>.
+This basically specifies that the incident created with the <code>eventID</code> (<code>23ehjdb8</code>), will be resolved with an <code>auto resolved</code> signal.</p>
+<p>This is also <strong>alert local</strong> if it is a batched alert source. So the <code>eventID</code> for a specific alert in the alerts array in the payload
+should be addressed using a <code>.</code> like <code>${.event_id}</code>.</p>
+<hr>
+<h4 id="message">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#message" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>message</span>
+  </h4><p>This specifies the template which <code>ingester</code> executes to form the incident message using the incoming payload.
+This is also <strong>alert local</strong> if it is a batched alert source.</p>
+<hr>
+<h4 id="description">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#description" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>description</span>
+  </h4><p>Much like <code>message</code>, this specifies the template used to form the description of the incident.
+And same as <code>message</code> field, this is also <strong>alert local</strong> if it is a batched alert source.</p>
+<hr>
+<h4 id="isprivate">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#isprivate" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>isPrivate</span>
+  </h4><p>This field defines if the specific alert source is a private alert source. This is made for alert sources
+which should not be exposed to the users but to be used by other systems or internally.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/squadcastui/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Squadcast UI</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> - alerts created from Web frontend</li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/jira-server/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Jira Server</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> - alerts from Jira server plugin</li>
+</ul>
+<hr>
+<h4 id="hideautomation">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#hideautomation" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>hideAutomation</span>
+  </h4><p>This field decides whether the alert source should be shown in the alert source selection dropdown present in all the automation rule modals in frontend.
+Typically, this field replicates the value of <code>isPrivate</code> field with the only exception of the <code>slack</code> alert source because of its unique usecase.</p>
+<hr>
+<h4 id="metadata">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#metadata" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>metadata</span>
+  </h4><p>This field is used purely for internal processing purposes. This field can be ignored.</p>
+<h4 id="helpertemplates">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#helpertemplates" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>helperTemplates</span>
+  </h4><p>This field defines some sub templated which can be used inside the main templates to
+reduce some code repetition.</p>
+<p><strong>Example</strong></p>
+<p>Say an alert source sends a priority as a number. Which is mapped to readable strings in the vendor&rsquo;s system. We need to show the right readable string instead of the number being sent.
+Say if this priority is used in  multiple places in the templates defined in the manifest, the conversion <code>if else if</code> will be written everywhere.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">helperTemplates</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- define &#34;priority&#34; -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- if eq . 3.0 -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    High
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- else if eq . 2.0 -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    Normal
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- else if eq . 1.0 -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    Low
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- end -}
+</span></span></span><span class="line"><span class="cl"><span class="sd">    ${- end -}</span><span class="w">    
+</span></span></span></code></pre></div><p>Now this newly defined template can be used in the <a href=#message class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>message</code></span></a>, <a href=#description class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>description</code></span></a>
+or even the <a href=#eventindicator class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>eventID</code></span></a> to display the new string.
+It can accessed inside the templates as following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">${template &#34;priority&#34; $root.priority}] ${root.message}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  **Priority**: ${template &#34;priority&#34; $root.priority}
+</span></span></span><span class="line"><span class="cl"><span class="sd">  ...</span><span class="w">  
+</span></span></span></code></pre></div><p>If an alert source is using this additional helperTemplate, remember to check for the correctness of the
+template. Try to keep the template&rsquo;s logic as small as possible. Imagine using this template as a module
+in a UI. For example, any complex logic that is written inside a template <code>loop</code> can be abstracted out
+into a template, so that the template will be more readable and accessible. So to sum up, <code>helperTemplates</code>
+are used to:</p>
+<ul>
+<li>Reduce code/template repetition</li>
+<li>Make the code/template more readable and accessible</li>
+</ul>
+<hr>
+<h2 id="best-practices-for-writing-message-and-description-templates">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#best-practices-for-writing-message-and-description-templates" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Best practices for writing message and description templates</span>
+  </h2><p><em>Very subjective guidelines ahead</em></p>
+<p>Get to know the alert source. Like what kind of alerts does it send and what can it be used for and etc.,
+Put yourself in the shoes of the users and imagine what makes sense to you.</p>
+<p>For example, for error tracking alert sources like <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/sentry/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Sentry</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> or <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/rollbar/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Rollbar</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+it will make sense to display the error stack-trace if available. And most errors will be
+from backend servers serving requests. So it will be of more info the display the
+request details as well.</p>
+<p>Another example: <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/grafana/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Grafana</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>. Grafana is a data-viz tool. It will make sense to show the viz
+at the time of the alert from Grafana if it can display it.</p>
+<h3 id="incident-message">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#incident-message" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Incident Message</span>
+  </h3><ul>
+<li>Make the incident message short and concise. Truncating an incident message in an SMS is never a good idea as it doesn&rsquo;t
+provide full context to the users</li>
+<li>Avoid unreadable text from incident message.
+Say there is an instance with an id <code>i-20o2h3jed9</code>. Neither the user know what that instance actually is
+(unless he has only one), nor does it provide any useful info about the alert.
+If it has a readable/rememberable hostname, then that will be of more fit in the incident message.
+<em>Imagine a Robotic female voice reading in-coherent letters.</em></li>
+<li>Form full english sentences with the pieces of data we have. This might not be possible with all the alert sources
+as we might not know what kind of alerts it can send. A good example is <a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/appsignal/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>AppSignal</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${- if $root.exception -}
+</span></span><span class="line"><span class="cl">Error: ${$root.exception.exception} on app ${$root.exception.site}
+</span></span><span class="line"><span class="cl">${- else if $root.performance -}
+</span></span><span class="line"><span class="cl">Performance: Issue on app ${$root.performance.site}
+</span></span><span class="line"><span class="cl">${- else if $root.marker -}
+</span></span><span class="line"><span class="cl">Deploy: ${$root.marker.site} has been deployed
+</span></span><span class="line"><span class="cl">${- end -}
+</span></span></code></pre></div>AppSignal sends different kinds of alerts like:
+<ul>
+<li>Error tracking alerts - Error: <strong>TypeError</strong> on app <strong>Create React App</strong></li>
+<li>Performance issue on the app - Performance: Issue on app <strong>My test app</strong></li>
+<li>Deployment signal - Deploy: <strong>My test app</strong> has been deployed
+Here the message is customized to show what has happened in a particular incoming alert.</li>
+</ul>
+</li>
+</ul>
+<h3 id="incident-description">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#incident-description" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Incident Description</span>
+  </h3><ul>
+<li>We support markdown. Go nuts. Really. Make info pop!</li>
+<li>Too many list nestings will look bad. Avoid that. See <strong>Amazon Cloudwatch Event Rules</strong> for more.</li>
+<li>Use code blocks in appropriate places. Like when to show a rule, script, stacktrace or log lines.
+<ul>
+<li>See the example defined above in the <a href=#arraySelector class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><code>arraySelector</code></span></a> section</li>
+<li><a href=../manifests/azuremonitor/azuremonitor.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Azure Monitor</strong></span></a> - Alert rule script</li>
+<li><a href=../manifests/datadog/datadog.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Datadog</strong></span></a> - Alert rule script</li>
+<li><a href=../manifests/papertrail/papertrail.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Papertrail</strong></span></a> - Log lines</li>
+<li><a href=../manifests/appsignal/appsignal.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>AppSignal</strong></span></a> - Stacktrace</li>
+<li><a href=../manifests/rollbar/rollbar.yaml class="DocsMarkdown--link"><span class="DocsMarkdown--link-content"><strong>Rollbar</strong></span></a> - Stacktrace</li>
+</ul>
+</li>
+<li>Use Heading sections.
+When there is too much data that can be shown, feel free to use
+headings and sub headings. This segregates data which can be easily distinguished by the user.
+Add <code>&lt;hr&gt;</code> using a <code>---</code> when there is a section which has no heading after a section which has one.
+<ul>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/azuremonitor/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Azure Monitor</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> - Too big to explain</li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/checkmk/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Check MK</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> - Host section + Service section and a less focused notification section without a header.</li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/sentry/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Sentry</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+<li><a href="https://github.com/SquadcastHub/Alert-Source-Integration/blob/main/hetrixtools/manifest.yaml" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content"><strong>Hetrixtools</strong></span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a> - Email/Domain blacklist notification : every domain/IP address has it&rsquo;s own header + section.</li>
+</ul>
+</li>
+<li>If the alert source sends an image URL associated with the alert, and not some company logo, user avatar or a favicon,
+the image should be displayed in the description in a appropriate section.</li>
+<li>Use <strong>all caps</strong> for abbreviations and acronyms.
+<ul>
+<li><del>Url</del> - URL</li>
+<li><del>Ip</del> - IP etc.,</li>
+</ul>
+</li>
+<li>Be really picky about what info is necessary and useful.
+<ul>
+<li>Avoid displaying timestamps. We show that in the incident details.
+Why? We will print the timestamp in either epochs or UTC, which again users have to go through the
+pain of converting it to their tz. Not worth it.
+If a timestamp field is about when the alert started (past time) then it&rsquo;ll make sense to show it.</li>
+<li>Try these criteria for info
+<ul>
+<li>Alert caused by?  - details about what caused the alert
+<ul>
+<li>condition/threshold, current value which violates the condition if available</li>
+<li>request where an error happened</li>
+<li>occurrence of a specific search string in a log line</li>
+<li>An event in a server - OOM, system service is stopped, some vuln event, SSL certificate expiry etc.,</li>
+</ul>
+</li>
+<li>Alert caused for? - details about either of host, service, node, machine, environment etc.,
+This might be different for different classes of alert sources.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Links: Links are really important. The alert sources only sends a subset of information to us. In many cases the description
+is alone not enough to get the full context of the alert.
+<ul>
+<li>Do not leave raw links in the description content. Try linking it to some understandable text.</li>
+<li>If an image is displayed, link that image markdown construct with a link markdown construct with the link of the image.
+Sometimes the images will be a private server which can only be accessed from the customers VPN. In that case the image
+will be displayed be blank or just the placeholder text used for the image. Linking the image will go to the fallback mode
+to display a link which the users can click and view.</li>
+<li>If a link for an entity is available, (like link for a service, host info etc.,) link it with the entity details instead of
+having a separate line to display the link.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">**Host**: [<span class="nt">mongo</span>](<span class="na">https://some.link.to/the/host/details</span>)
+</span></span></code></pre></div>will be better than:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">**Host**: mongo
+</span></span><span class="line"><span class="cl"><span class="gs">**Link**</span>: https://some.link.to/the/host/details
+</span></span></code></pre></div></li>
+<li>If the payload doesn&rsquo;t contain any links try to form links using a template that will lead to the relevant page in the vendor&rsquo;s platform.
+Of-course, this is just a nice to have.</li>
+</ul>
+</li>
+<li>Whatever markdown content is written please run it against a markdown viewer for a aesthetic review.
+<ul>
+<li>VS Code - Copy contents to a <code>new_file.md</code> and <code>⌘-K V</code></li>
+<li>Use <a href="https://dillinger.io" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Dillinger</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+</ul>
+</li>
+<li>It is advised to &ldquo;Go nuts&rdquo;. Please make sure the content is compatible with <a href="https://commonmark.org/" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">commonmark</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a>.</li>
+</ul>
+<h2 id="further-reference">
+    <span class="DocsMarkdown--header-anchor-positioner">
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#further-reference" aria-hidden="true">&#8203;​</a>
+    </span>
+    <span>Further Reference</span>
+  </h2><ul>
+<li><a href="https://golang.org/pkg/text/template/#pkg-overview" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Reference:Go Templates</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></li>
+</ul>
+</article>
+      </div>
+    </main>
+
+    <footer class="DocsFooter">
+  <div class="DocsFooter--content">
+    <div>
+      <span class="DocsFooter--edit-on-gh-link-wrapper"><a href="https://github.com/SquadcastHub/developer.squadcast.com/blob/production/content/build-integrations/manifest.md" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">Edit on GitHub</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></span>
+
+      <span class="DocsFooter--content-dot-spacer">
+        &nbsp; · &nbsp;
+      </span>
+
+      <span class="DocsFooter--content-time">
+        Updated <time
+  class="relative"
+  datetime=2022-07-19T12:35:05&#43;05:30
+  title=2022-07-19
+>July 19, 2022</time>
+      </span>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

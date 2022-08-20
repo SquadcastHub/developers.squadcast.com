@@ -9,7 +9,7 @@ meta:
   title: Scripts
   description: Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it.
   author: '@SquadcastHub'
-  image: /cf-twitter-card.png
+  # image: /cf-twitter-card.png
 
 externals:
   - title: Full API docs
