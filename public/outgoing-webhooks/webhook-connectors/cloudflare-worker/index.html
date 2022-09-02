@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en" theme="light" is-docs-page js-focus-visible-polyfill-available>
   <head><meta charset="utf-8">
-<title>Outgoing webhooks</title>
+<title>Cloudflare worker script</title>
 <meta http-equiv="cleartype" content="on"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<meta name="application-name" content="Outgoing webhooks"/>
+<meta name="application-name" content="Cloudflare worker script"/>
 <meta name="msapplication-tap-highlight" content="no"/>
-<meta name="apple-mobile-web-app-title" content="Outgoing webhooks"/>
+<meta name="apple-mobile-web-app-title" content="Cloudflare worker script"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="mobile-web-app-capable" content="yes"/>
@@ -17,18 +17,18 @@
 <meta name="description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions." />
 
 <meta property="og:image" content="https://developers.squadcast.com"/>
-<meta property="og:title" content="Outgoing webhooks"/>
+<meta property="og:title" content="Cloudflare worker script"/>
 <meta property="og:description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions."/>
 <meta property="og:type" content="website"/>
 
-<meta name="twitter:title" content="Outgoing webhooks"/>
+<meta name="twitter:title" content="Cloudflare worker script"/>
 <meta name="twitter:image" content="https://developers.squadcast.com"/>
 <meta name="twitter:description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions."/>
 <meta name="twitter:creator" content="@SquadcastHub"/>
 <meta name="twitter:card" content="summary_large_image"/>
 
 <link rel="icon" href="/favicon-32x32.png"/>
-<link rel="canonical" href="https://developers.squadcast.com/outgoing-webhooks/"/>
+<link rel="canonical" href="https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/cloudflare-worker/"/>
 <link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
 
@@ -171,31 +171,31 @@
         <div class="DocsSidebar--nav-section-shadow" style="opacity: 0;"></div>
 
         <ul class="DocsSidebar--nav">
-          
-          <li class="DocsSidebar--nav-item" is-active>
-            <a aria-current="page" class="DocsSidebar--nav-link" is-active href="/outgoing-webhooks/">
+          <li class="DocsSidebar--nav-item">
+            <a class="DocsSidebar--nav-link" href="/outgoing-webhooks/">
               <span class="DocsSidebar--nav-link-highlight"></span>
               <span class="DocsSidebar--nav-link-text">Overview</span>
             </a>
-          </li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload-format/">
+          </li>
+          <li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload-format/">
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Payload format</span>
     </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/use-cases/">
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Use cases</span>
-    </a></li><li class="DocsSidebar--nav-item"><button class="Button DocsSidebar--nav-expand-collapse-button">
+    </a></li><li class="DocsSidebar--nav-item" is-active-root is-expanded><button class="Button DocsSidebar--nav-expand-collapse-button">
       <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
       <span is-visually-hidden>Expand: Webhook connectors</span>
     </button><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/">
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Webhook connectors</span>
-    </a><div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px;"><div class="DocsSidebar--nav-item-collapse-wrapper">
+    </a><div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-expanded" style="min-height:0px;transition-duration:400ms" is-expanded><div class="DocsSidebar--nav-item-collapse-wrapper">
           <div class="DocsSidebar--nav-item-collapse-wrapperInner">
             <div class="DocsSidebar--nav-item-collapse-content">
-              <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1"><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/nodejs/" tabindex="-1">
+              <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1"><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/nodejs/">
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Nodejs conncetor</span>
-    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/cloudflare-worker/" tabindex="-1">
+    </a></li><li class="DocsSidebar--nav-item" is-active><a aria-current="page" class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/cloudflare-worker/" is-active>
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Cloudflare worker script</span>
     </a></li></ul>
@@ -292,57 +292,33 @@
 
       <div class="DocsContent" page-type="document">
         <article class="DocsMarkdown">
-  <h1 id="outgoing-webhooks">Outgoing Webhooks</h1><p>Webhooks allow you to connect a platform that you manage (either an API that you create by yourself, or a third party service) to a stream of future events.</p>
-<p>Setting up a webhook on Squadcast enables you to receive information (referred to as events) from Squadcast as they happen. This can help you avoid continuously polling Squadcast’s REST APIs or manually checking the Squadcast web/mobile application for desired information.</p>
-<p>The rest of this document will explain how you can set up these webhooks, as well as list the events that can be sent to your webhook destinations.</p>
-<p>Make sure you have the pre-requisite permissions to set up outgoing webhooks.</p>
-<h2 id="supported-events">
+  <h1 id="cloudflare-workers-based-connectors">Cloudflare workers based connectors</h1><p>GitHub - <a href="https://github.com/SquadcastHub/Squadcast-Cloudflare-Webhook-Connectors" class="DocsMarkdown--link" target="_blank" rel="noopener">
+  <span class="DocsMarkdown--link-content">https://github.com/SquadcastHub/Squadcast-Cloudflare-Webhook-Connectors</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+  <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
+    <title id="title-4744738674102027">External link icon</title>
+    <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+  </svg>
+  <span is-visually-hidden>Open external link</span>
+</span></a></p>
+<p>Cloudflare workers help you deploy serverless code instantly across the globe on its edge and we have created a 1-click Deploy with Workers script, which will help you get started quickly.</p>
+<h3 id="chatops">
     <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#supported-events" aria-hidden="true">&#8203;​</a>
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#chatops" aria-hidden="true">&#8203;​</a>
     </span>
-    <span>Supported Events</span>
-  </h2><p>The webhook that you have configured can be triggered for certain events occurring in Squadcast. At the moment, the following incident-related events are supported:</p>
-<p>Incident triggered
-Incident reassigned
-Incident acknowledged
-Incident resolved</p>
-<p>You can choose multiple triggers for a webhook. Information is sent to the provided URLs if any of the triggers match.</p>
-<p>If your use-case requires more Squadcast events to be supported, please reach out to our Support team with details of the same.</p>
-<h2 id="communication-protocol-for-webhooks">
+    <span>ChatOps</span>
+  </h3><ul>
+<li>Slack</li>
+<li>Discord</li>
+<li>Microsoft Teams</li>
+</ul>
+<h3 id="ticketing">
     <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#communication-protocol-for-webhooks" aria-hidden="true">&#8203;​</a>
+      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#ticketing" aria-hidden="true">&#8203;​</a>
     </span>
-    <span>Communication Protocol for Webhooks</span>
-  </h2><p>A webhook is called whenever the configured events occur in Squadcast.</p>
-<p>A webhook call is made using the HTTP POST method to the URL(s) that were added when the webhook was configured, with a body that is encoded using JSON.</p>
-<p>Squadcast expects that the server that responds to the webhook will return a 2xx response code upon success. If a non-2xx response is received, Squadcast will retry the request for a maximum of 3 times.</p>
-<h2 id="urls-and-headers">
-    <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#urls-and-headers" aria-hidden="true">&#8203;​</a>
-    </span>
-    <span>URLs and Headers</span>
-  </h2><p>We support the addition of multiple URL endpoints, with POST, PUT and PATCH methods.</p>
-<p>Incident payloads will be sent to all the URL endpoints that are added.</p>
-<p>You can also configure additional headers. These headers will get attached to all the webhook calls that will be made based on this configuration.</p>
-<h2 id="filters">
-    <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#filters" aria-hidden="true">&#8203;​</a>
-    </span>
-    <span>Filters</span>
-  </h2><p>You can filter on top of events from the Services and Alert Sources drop-downs, either by having an individual expression or a combination of expressions/expression groups.</p>
-<h2 id="logs">
-    <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#logs" aria-hidden="true">&#8203;​</a>
-    </span>
-    <span>Logs</span>
-  </h2><p>Once the webhook call has been made, you can view the logs for it in the Logs tab.</p>
-<p>Click on the expand icon on any of the individual logs to view the payload that has been sent across.</p>
-<h2 id="additional-settings">
-    <span class="DocsMarkdown--header-anchor-positioner">
-      <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#additional-settings" aria-hidden="true">&#8203;​</a>
-    </span>
-    <span>Additional Settings</span>
-  </h2><p>Configure the Name, Description and Failure Notification email in the Settings tab. This is particularly helpful when you (or an administrator) would want to be notified for webhook-related failures.</p>
+    <span>Ticketing</span>
+  </h3><ul>
+<li>Trello</li>
+</ul>
 </article>
       </div>
     </main>
@@ -350,7 +326,7 @@ Incident resolved</p>
     <footer class="DocsFooter">
   <div class="DocsFooter--content">
     <div>
-      <span class="DocsFooter--edit-on-gh-link-wrapper"><a href="https://github.com/SquadcastHub/developer.squadcast.com/blob/production/content/outgoing-webhooks/_index.md" class="DocsMarkdown--link" target="_blank" rel="noopener">
+      <span class="DocsFooter--edit-on-gh-link-wrapper"><a href="https://github.com/SquadcastHub/developer.squadcast.com/blob/production/content/outgoing-webhooks/webhook-connectors/cloudflare-worker.md" class="DocsMarkdown--link" target="_blank" rel="noopener">
   <span class="DocsMarkdown--link-content">Edit on GitHub</span><span class="DocsMarkdown--link-external-icon" aria-hidden="true">
   <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-4744738674102027" xmlns="http://www.w3.org/2000/svg">
     <title id="title-4744738674102027">External link icon</title>
@@ -366,9 +342,9 @@ Incident resolved</p>
       <span class="DocsFooter--content-time">
         Updated <time
   class="relative"
-  datetime=2022-06-28T14:08:39&#43;05:30
-  title=2022-06-28
->June 28, 2022</time>
+  datetime=0001-01-01T00:00:00&#43;00:00
+  title=0001-01-01
+>January 1, 0001</time>
       </span>
     </div>
   </div>

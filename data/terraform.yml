@@ -9,7 +9,7 @@ product:
 
 meta:
   title: Squadcast Terraform Provider
-  description: Incident webhooks (Incident API) can be used to route alerts into Squadcast platform, send events to trigger and resolve incidents and build some cool stuff with it.
+  description: Squadcast's latest Terraform provider release will help you configure your Squadcast account in minutes - You can manage multiple resources like Users, Permissions, Escalation Policies, Services, Automation Rules and more.
   author: '@SquadcastHub'
   # image: /cf-twitter-card.png
 
@@ -24,3 +24,5 @@ externals:
     url: https://registry.terraform.io/providers/SquadcastHub/squadcast/latest/docs
   - title: Squadcast Terraform Repository
     url: https://github.com/SquadcastHub/terraform-provider-squadcast
+  - title: Squadcast Terraform repository
+    url: https://support.squadcast.com/terraform-and-api-documentation/terraform-provider

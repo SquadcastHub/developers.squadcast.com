@@ -14,7 +14,7 @@
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/</loc>
+      <loc>https://developers.squadcast.com/terraform/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
@@ -28,22 +28,21 @@
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/terraform/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://developers.squadcast.com/webhook-connectors/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://developers.squadcast.com/api/</loc>
       <lastmod>2022-06-28T18:58:07+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/scripts/alert-source/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/payload-format/</loc>
+      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
@@ -56,14 +55,20 @@
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/api/documentation/</loc>
+      <loc>https://developers.squadcast.com/scripts/custom-scripts/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/use-cases/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/webhook-connectors/cloudflare-worker/</loc>
+      <loc>https://developers.squadcast.com/api/documentation/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
@@ -77,21 +82,7 @@
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/webhook-connectors/nodejs/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
       <loc>https://developers.squadcast.com/incoming-webhooks/payload-format/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/payload-format/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
@@ -105,8 +96,13 @@
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/use-cases/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</loc>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
@@ -114,6 +110,19 @@
     <url>
       <loc>https://developers.squadcast.com/build-integrations/template-functions/</loc>
       <lastmod>2022-07-19T12:31:33+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/cloudflare-worker/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://developers.squadcast.com/outgoing-webhooks/</loc>
+      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>

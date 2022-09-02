@@ -1,8 +1,8 @@
 ---
-title: Quickstart
-pcx-content-type: tutorial
+title: Outgoing Webhooks
+pcx-content-type: overview
 layout: single
-weight: 1
+weight: 0
 meta:
   title: Outgoing webhooks
 ---

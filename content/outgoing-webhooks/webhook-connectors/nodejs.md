@@ -1,7 +1,10 @@
 ---
+title: Nodejs conncetor
 pcx-content-type: navigation
-title: Nodejs
-weight: 4
+layout: single
+weight: 5
+meta:
+  title: Nodejs conncetor
 ---
 
 # Nodejs connectors

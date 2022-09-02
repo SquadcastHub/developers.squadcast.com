@@ -1,7 +1,7 @@
 ---
 pcx-content-type: navigation
 title: Use cases
-weight: 4
+weight: 3
 ---
 
 # Use-cases for outgoing Webhooks
