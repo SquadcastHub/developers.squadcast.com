@@ -1,7 +1,7 @@
 ---
 pcx-content-type: navigation
 title: Cloudflare worker script
-weight: 4
+weight: 6
 ---
 
 # Cloudflare workers based connectors

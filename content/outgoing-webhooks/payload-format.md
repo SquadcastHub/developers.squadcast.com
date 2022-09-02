@@ -1,7 +1,7 @@
 ---
 pcx-content-type: navigation
 title: Payload format
-weight: 4
+weight: 2
 ---
 
 # Webhook Payloads

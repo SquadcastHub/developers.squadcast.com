@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quickstart on Squadcast Developers</title>
+    <title>Outgoing Webhooks on Squadcast Developers</title>
     <link>https://developers.squadcast.com/outgoing-webhooks/</link>
-    <description>Recent content in Quickstart on Squadcast Developers</description>
+    <description>Recent content in Outgoing Webhooks on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://developers.squadcast.com/outgoing-webhooks/index.xml" rel="self" type="application/rss+xml" />
     <item>

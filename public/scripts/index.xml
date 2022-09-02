@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quickstart on Squadcast Developers</title>
+    <title>Scripts on Squadcast Developers</title>
     <link>https://developers.squadcast.com/scripts/</link>
-    <description>Recent content in Quickstart on Squadcast Developers</description>
+    <description>Recent content in Scripts on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://developers.squadcast.com/scripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alertsource integration scripts</title>
+      <link>https://developers.squadcast.com/scripts/alert-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.squadcast.com/scripts/alert-source/</guid>
+      <description>Alertsource integration scriptsSquadcast integrates with other observabilty tools primarily using webhooks and some tools doesn&amp;rsquo;t support webhooks natively and might need certain scripts / modules for integrating with Squadcast. This page has documented such scripts available.
+&amp;#8203;​ Checkmk Script - https://github.com/SquadcastHub/squadcast-checkmk-script External link icon Open external link Support doc - https://support.squadcast.com/integrations/alert-source-integrations-native/checkmk External link icon Open external link &amp;#8203;​ Icinga2 Script - https://github.com/SquadcastHub/squadcast-icinga2-integration External link icon Open external link Support doc - https://support.</description>
+    </item>
+    
+    <item>
+      <title>Custom scripts</title>
+      <link>https://developers.squadcast.com/scripts/custom-scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.squadcast.com/scripts/custom-scripts/</guid>
+      <description>Custom ScriptsCustom scripts are used to perform certain custom actions in Squadcast with the help of Squadcast API&amp;rsquo;s and webhooks.
+&amp;#8203;​ See who is on-call in Slack The purpose of the script is to get the list of people who are on-call for a given Squadcast Schedule across all the shifts, at the time of execution of the script and send it to a slack channel.
+Script - https://github.com/SquadcastHub/who-s-oncall-slack External link icon Open external link Language - Go</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,8 +1,8 @@
 ---
-title: Quickstart
-pcx-content-type: tutorial
+title: Webhook connectors
+pcx-content-type: overview
 layout: single
-weight: 1
+weight: 4
 meta:
   title: Webhook Connectors
 ---
