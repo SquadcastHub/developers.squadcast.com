@@ -19,14 +19,15 @@ Make sure you have the pre-requisite permissions to set up outgoing webhooks.
 
 ## Supported Events
 
-The webhook that you have configured can be triggered for certain events occurring in Squadcast. At the moment, the following incident-related events are supported:
-
-  Incident triggered
-  Incident reassigned
-  Incident acknowledged
-  Incident resolved
+The webhook that you have configured can be triggered for certain events occurring in Squadcast. 
 
 You can choose multiple triggers for a webhook. Information is sent to the provided URLs if any of the triggers match.
+
+In the legacy version v1, only limited events are supported whereas the latest version v2, supports an exhaustive list of events.
+
+For **v1 events**, [refer here](./payload/v1/).
+
+For **v2 events**, [refer here](./payload/v2/).
 
 If your use-case requires more Squadcast events to be supported, please reach out to our Support team with details of the same.
 
