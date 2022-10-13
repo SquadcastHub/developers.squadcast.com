@@ -27,3 +27,4 @@ If you are already using Squadcast via API or the Web UI and would like to gener
 
 We have added Squadcast provider support to the Terraformer project but our [PR](https://github.com/GoogleCloudPlatform/terraformer/pull/1473) is not merged yet. Till it's merged, we request you to use [Squadcast Terraformer](https://github.com/SquadcastHub/terraformer) and the related binaries to generate Terraform files.
 
+For more details about using Terraformer, [check here](./tutorial/how-to-use-terraformer/).
