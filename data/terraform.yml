@@ -1,4 +1,4 @@
-name: Squadcast Terraform Provider
+name: Terraform
 logo: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 55"><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z" fill="url(#a)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 9.612 14.91 8.61v17.214l-14.91-8.606V9.612Z" fill="url(#b)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z" fill="url(#c)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.089 18.221v17.215l14.91-8.606V9.612l-14.91 8.61Z" fill="url(#d)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z" fill="url(#e)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v17.219l14.91 8.61V8.608L0 0Z" fill="url(#f)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z" fill="url(#g)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m16.542 45.93 14.91 8.61V37.325l-14.91-8.61v17.216Z" fill="url(#h)"/><defs><linearGradient id="a" x1="23.997" y1="9.612" x2="23.997" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="b" x1="23.997" y1="9.612" x2="23.997" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="c" x1="40.544" y1="9.612" x2="40.544" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="d" x1="40.544" y1="9.612" x2="40.544" y2="35.436" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="e" x1="7.455" y1="0" x2="7.455" y2="25.828" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="f" x1="7.455" y1="0" x2="7.455" y2="25.828" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="g" x1="23.997" y1="28.716" x2="23.997" y2="54.54" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="h" x1="23.997" y1="28.716" x2="23.997" y2="54.54" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
 
 
@@ -8,21 +8,21 @@ product:
   url: /terraform/
 
 meta:
-  title: Squadcast Terraform Provider
+  title: Squadcast Terraform
   description: Squadcast's latest Terraform provider release will help you configure your Squadcast account in minutes - You can manage multiple resources like Users, Permissions, Escalation Policies, Services, Automation Rules and more.
   author: '@SquadcastHub'
   # image: /cf-twitter-card.png
 
 externals:
-  - title: Full API docs
+  - title: API docs
     url: https://apidocs.squadcast.com/
   - title: Support docs
     url: https://support.squadcast.com
   - title: Squadcast homepage
     url: https://squadcast.com
-  - title: Terraform Registry
+  - title: Squadcast Terraform Registry
     url: https://registry.terraform.io/providers/SquadcastHub/squadcast/latest/docs
   - title: Squadcast Terraform Repository
     url: https://github.com/SquadcastHub/terraform-provider-squadcast
-  - title: Squadcast Terraform repository
+  - title: Squadcast Terraform Support doc
     url: https://support.squadcast.com/terraform-and-api-documentation/terraform-provider
