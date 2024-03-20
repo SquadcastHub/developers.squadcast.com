@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" theme="light" is-site-page is-docs-page>
-  <head><meta charset="utf-8">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <title>Not found</title>
 <meta http-equiv="cleartype" content="on"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -16,19 +16,19 @@
 
 <meta name="description" content="" />
 
-<meta property="og:image" content="https://developers.squadcast.com"/>
+<meta property="og:image" content="http://localhost:1313/"/>
 <meta property="og:title" content="Not found"/>
 <meta property="og:description" content=""/>
 <meta property="og:type" content="website"/>
 
 <meta name="twitter:title" content="Not found"/>
-<meta name="twitter:image" content="https://developers.squadcast.com"/>
+<meta name="twitter:image" content="http://localhost:1313/"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:creator" content=""/>
 <meta name="twitter:card" content="summary_large_image"/>
 
 <link rel="icon" href="/favicon-32x32.png"/>
-<link rel="canonical" href="https://developers.squadcast.com/404.html"/>
+<link rel="canonical" href="http://localhost:1313/404.html"/>
 <link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
 
@@ -39,7 +39,56 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
 <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
 <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
-<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/home.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/home.min.80873b1a9f19bc456e7ca1e8c3a4748a.js" defer></script><style>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/home.css"/><script>// <stdin>
+(function() {
+  let tooEarly = false;
+  let btn;
+  let media;
+  if (document.readyState !== "loading")
+    init();
+  else
+    addEventListener("DOMContentLoaded", init);
+  btn = document.querySelector("#ThemeToggle");
+  tooEarly = !btn;
+  function setter(isDark) {
+    try {
+      let theme = isDark ? "dark" : "light";
+      document.documentElement.setAttribute("theme", theme);
+      localStorage.theme = JSON.stringify({ theme });
+      if (btn) {
+        btn.checked = isDark;
+        tooEarly = false;
+      } else if (tooEarly) {
+        setTimeout(setter, 1, isDark);
+      }
+    } catch (err) {
+    }
+  }
+  function init() {
+    btn = btn || document.querySelector("#ThemeToggle");
+    btn.addEventListener("change", () => setter(!!btn.checked));
+    addEventListener("keydown", (ev) => {
+      if (ev.target !== document.body)
+        return;
+      if (ev.which === 68 && ev.shiftKey) {
+        ev.preventDefault();
+        setter(!btn.checked);
+      }
+    });
+  }
+  try {
+    media = window.matchMedia("(prefers-color-scheme:dark)");
+    media.onchange = (ev) => setter(ev.matches);
+  } catch (err) {
+  }
+  try {
+    let value = localStorage.theme;
+    let row = value && JSON.parse(value);
+    setter(row ? /dark/.test(row.theme) : !!(media && media.matches));
+  } catch (err) {
+  }
+})();
+</script><script src="/home.js" defer></script><style>
       .logo-box{
         height: 21px;
         width: 30px;

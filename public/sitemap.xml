@@ -1,142 +1,371 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-      <loc>https://developers.squadcast.com/build-integrations/</loc>
+      <loc>http://localhost:1313/terraform/installing/</loc>
+      <lastmod>2022-10-13T15:08:32+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v1/incident-triggered/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-triggered/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/build-integrations/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/incoming-webhooks/</loc>
+      <loc>http://localhost:1313/incoming-webhooks/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/terraform/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
+      <loc>http://localhost:1313/scripts/</loc>
+      <lastmod>2022-09-02T17:20:34+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/scripts/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://developers.squadcast.com/api/</loc>
+      <loc>http://localhost:1313/api/</loc>
       <lastmod>2022-06-28T18:58:07+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/scripts/alert-source/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/use-cases/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/payload-format/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
+      <loc>http://localhost:1313/scripts/alert-source/</loc>
+      <lastmod>2022-09-02T17:20:34+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/build-integrations/alert-sources/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v1/incident-reassigned/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-reassigned/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/terraform/tutorial/</loc>
+      <lastmod>2022-10-13T15:08:32+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/build-integrations/alert-sources/</loc>
       <lastmod>2022-07-19T12:31:33+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/scripts/custom-scripts/</loc>
+      <loc>http://localhost:1313/scripts/custom-scripts/</loc>
+      <lastmod>2022-09-02T17:20:34+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/use-cases/</loc>
+      <loc>http://localhost:1313/terraform/tutorial/how-to-use-terraformer/</loc>
+      <lastmod>2022-10-13T18:42:36+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v1/incident-acknowledged/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-acknowledged/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/api/documentation/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/api/documentation/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://developers.squadcast.com/build-integrations/manifest/</loc>
+      <loc>http://localhost:1313/build-integrations/manifest/</loc>
       <lastmod>2022-07-19T12:35:05+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/incoming-webhooks/payload-format/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v1/incident-resolved/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-resolved/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/incoming-webhooks/payload-format/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/incoming-webhooks/use-cases/</loc>
+      <loc>http://localhost:1313/incoming-webhooks/use-cases/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/webhook-connectors/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/webhook-connectors/nodejs/</loc>
+      <lastmod>2022-09-02T17:20:34+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/build-integrations/template-functions/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/slo-violating-incident/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/build-integrations/template-functions/</loc>
       <lastmod>2022-07-19T12:31:33+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/cloudflare-worker/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/webhook-connectors/cloudflare-worker/</loc>
+      <lastmod>2022-09-02T17:20:34+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/outgoing-webhooks/</loc>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/slo-violation-false-positive/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/slo-violation-unmark-false-positive/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/slo-violating-incident-update-error-budget/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-notes-created/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-notes-updated/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-notes-deleted/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-note-starred/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-note-unstarred/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-tags-updated/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-task-created/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-task-updated/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-task-deleted/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-task-completed/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-task-uncompleted/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-communication-channel-created/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-communication-channel-updated/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/incident-communication-channel-deleted/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/statuspage-updated/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/search/</loc>
       <lastmod>2022-06-28T14:08:39+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/search/</loc>
-      <lastmod>2022-06-28T14:08:39+05:30</lastmod>
+      <loc>http://localhost:1313/</loc>
+      <lastmod>2023-09-26T16:18:09+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://developers.squadcast.com/</loc>
-      <lastmod>2022-08-20T18:22:38+05:30</lastmod>
+      <loc>http://localhost:1313/terraform/</loc>
+      <lastmod>2022-10-13T18:42:36+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v1/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:1313/outgoing-webhooks/payload/v2/</loc>
+      <lastmod>2022-10-08T11:16:30+05:30</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>

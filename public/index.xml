@@ -2,111 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Squadcast Developers</title>
-    <link>https://developers.squadcast.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://developers.squadcast.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get started</title>
+      <link>http://localhost:1313/terraform/installing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/terraform/installing/</guid>
+      <description>Install TerraformTerraform ships as a single binary file. The examples below include installation information for popular operating systems.&#xA;For official instructions on installing Terraform, refer to Install Terraform External link icon Open external link .&#xA;&amp;#8203;​ Linux On Linux, download and place the binary in your PATH.&#xA;$ wget -q https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_arm64.zip $ unzip terraform_1.3.2_linux_amd64.zip Archive: terraform_1.3.2_linux_amd64.zip inflating: terraform $ sudo mv terraform /usr/local/bin/terraform $ terraform version Terraform v1.3.2 &amp;#8203;​ Mac The easiest way to install Terraform on macOS is with Homebrew.</description>
+    </item>
+    <item>
+      <title>Incident Triggered</title>
+      <link>http://localhost:1313/outgoing-webhooks/payload/v1/incident-triggered/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/outgoing-webhooks/payload/v1/incident-triggered/</guid>
+      <description>Incident Triggered (v1)For v2, click here&#xA;&amp;#8203;​ Payload { &amp;#34;id&amp;#34;: &amp;#34;61c075f78589dca75fdb2f44&amp;#34;, &amp;#34;event_type&amp;#34;: &amp;#34;incident_triggered&amp;#34;, &amp;#34;organization&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;609b8e9978d2770008db8638&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;My Org&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61518af788792704697f3da0&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;email trigger&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;email-trigger&amp;#34; }, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;5fae6d03ef87d3896aa92ad1&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;message&amp;#34;: &amp;#34;CPU Throttling: Over 90% of cpu is being utilized&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Over 90% of cpu is being utilized from the past 2 hours which is a drastic increase from before.</description>
+    </item>
+    <item>
+      <title>Incident Triggered</title>
+      <link>http://localhost:1313/outgoing-webhooks/payload/v2/incident-triggered/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/outgoing-webhooks/payload/v2/incident-triggered/</guid>
+      <description>Incident Triggered (v2)For v1, click here&#xA;&amp;#8203;​ Payload { &amp;#34;version&amp;#34;: &amp;#34;v2&amp;#34;, &amp;#34;event&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;633e670afbb04a577527b4b8&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;incident.triggered&amp;#34;, &amp;#34;resource&amp;#34;: &amp;#34;incident&amp;#34;, &amp;#34;timestamp&amp;#34;: &amp;#34;2022-10-06T05:26:34.945695898Z&amp;#34; }, &amp;#34;data&amp;#34;: { &amp;#34;resource_data&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;633e670ae998089239c9f293&amp;#34;, &amp;#34;message&amp;#34;: &amp;#34;test incident&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://app.squadcast.com/incident/633e670ae998089239c9f293&amp;#34;, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;6077f7225fdc7075e371685f&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;62f0fdde613c98528db9f8bc&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Service Test2&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;service-test2&amp;#34; }, &amp;#34;request_id&amp;#34;: &amp;#34;e287c6c3-fff9-40b7-9561-72dc7bf4cf28&amp;#34;, &amp;#34;status&amp;#34;: &amp;#34;triggered&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2022-10-06T05:26:34.37Z&amp;#34;, &amp;#34;assigned_to&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;629e23f5eb4041a20a43b11c&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;escalationpolicy&amp;#34;, &amp;#34;assigned_at&amp;#34;: &amp;#34;0001-01-01T00:00:00Z&amp;#34; }, &amp;#34;tags&amp;#34;: null, &amp;#34;event_payload&amp;#34;: { &amp;#34;assignee&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;629e23f5eb4041a20a43b11c&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;escalationpolicy&amp;#34; }, &amp;#34;attachments&amp;#34;: [], &amp;#34;created_by&amp;#34;: &amp;#34;61963608090a650008fff152&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;message&amp;#34;: &amp;#34;test incident&amp;#34;, &amp;#34;tags&amp;#34;: { &amp;#34;&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;#0C93E3&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#34; } } }, &amp;#34;timeline&amp;#34;: [ { &amp;#34;action&amp;#34;: &amp;#34;triggered&amp;#34;, &amp;#34;assigned_to&amp;#34;: &amp;#34;escalationpolicy&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;time&amp;#34;: &amp;#34;2022-10-06T05:26:34.</description>
+    </item>
+    <item>
+      <title>Use cases</title>
+      <link>http://localhost:1313/outgoing-webhooks/use-cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/outgoing-webhooks/use-cases/</guid>
+      <description> Use-cases for outgoing WebhooksWebhooks can be leveraged in various scenarios. We have put together some common use-cases.&#xA;Building internal custom dashboards to visualize or analyze incidents Sending data to ticketing tools, such as Zendesk, Freshdesk, Shortcut, Asana, etc. Sending events to communication apps, such as Slack, MS Teams, etc. Alerting when a workflow is disrupted- then use the API to re-run the workflow Triggering internal notification systems to alert people when incidents are created/resolved Building your own automation plug-ins and tools </description>
+    </item>
     <item>
       <title>Alertsource integration scripts</title>
-      <link>https://developers.squadcast.com/scripts/alert-source/</link>
+      <link>http://localhost:1313/scripts/alert-source/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/scripts/alert-source/</guid>
-      <description>Alertsource integration scriptsSquadcast integrates with other observabilty tools primarily using webhooks and some tools doesn&amp;rsquo;t support webhooks natively and might need certain scripts / modules for integrating with Squadcast. This page has documented such scripts available.
-&amp;#8203;​ Checkmk Script - https://github.com/SquadcastHub/squadcast-checkmk-script External link icon Open external link Support doc - https://support.squadcast.com/integrations/alert-source-integrations-native/checkmk External link icon Open external link &amp;#8203;​ Icinga2 Script - https://github.com/SquadcastHub/squadcast-icinga2-integration External link icon Open external link Support doc - https://support.</description>
+      <guid>http://localhost:1313/scripts/alert-source/</guid>
+      <description>Alertsource integration scriptsSquadcast integrates with other observabilty tools primarily using webhooks and some tools doesn&amp;rsquo;t support webhooks natively and might need certain scripts / modules for integrating with Squadcast. This page has documented such scripts available.&#xA;&amp;#8203;​ Checkmk Script - https://github.com/SquadcastHub/squadcast-checkmk-script External link icon Open external link Support doc - https://support.squadcast.com/integrations/alert-source-integrations-native/checkmk External link icon Open external link &amp;#8203;​ Icinga2 Script - https://github.com/SquadcastHub/squadcast-icinga2-integration External link icon Open external link Support doc - https://support.</description>
     </item>
-    
     <item>
-      <title>Payload format</title>
-      <link>https://developers.squadcast.com/outgoing-webhooks/payload-format/</link>
+      <title>Incident Reassigned</title>
+      <link>http://localhost:1313/outgoing-webhooks/payload/v1/incident-reassigned/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/outgoing-webhooks/payload-format/</guid>
-      <description>Webhook Payloads &amp;#8203;​ Incident Triggered { &amp;#34;id&amp;#34;: &amp;#34;61c075f78589dca75fdb2f44&amp;#34;, &amp;#34;event_type&amp;#34;: &amp;#34;incident_triggered&amp;#34;, &amp;#34;organization&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;609b8e9978d2770008db8638&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;My Org&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61518af788792704697f3da0&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;email trigger&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;email-trigger&amp;#34; }, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;5fae6d03ef87d3896aa92ad1&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;message&amp;#34;: &amp;#34;CPU Throttling: Over 90% of cpu is being utilized&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Over 90% of cpu is being utilized from the past 2 hours which is a drastic increase from before. Please checkout the metrics.</description>
+      <guid>http://localhost:1313/outgoing-webhooks/payload/v1/incident-reassigned/</guid>
+      <description>Incident Reassigned (v1)For v2, click here&#xA;&amp;#8203;​ Payload { &amp;#34;id&amp;#34;: &amp;#34;61c075f78589dca75fdb2f44&amp;#34;, &amp;#34;event_type&amp;#34;: &amp;#34;incident_reassigned&amp;#34;, &amp;#34;organization&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;609b8e9978d2770008db8638&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;My Org&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61518af788792704697f3da0&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;email trigger&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;email-trigger&amp;#34; }, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;5fae6d03ef87d3896aa92ad1&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;message&amp;#34;: &amp;#34;CPU Throttling: Over 90% of cpu is being utilized&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Over 90% of cpu is being utilized from the past 2 hours which is a drastic increase from before.</description>
     </item>
-    
+    <item>
+      <title>Incident Reassigned</title>
+      <link>http://localhost:1313/outgoing-webhooks/payload/v2/incident-reassigned/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/outgoing-webhooks/payload/v2/incident-reassigned/</guid>
+      <description>Incident Reassigned (v2)For v1, click here&#xA;&amp;#8203;​ Payload { &amp;#34;version&amp;#34;: &amp;#34;v2&amp;#34;, &amp;#34;event&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;633e69d3fbb04a577527b4bc&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;incident.reassigned&amp;#34;, &amp;#34;resource&amp;#34;: &amp;#34;incident&amp;#34;, &amp;#34;timestamp&amp;#34;: &amp;#34;2022-10-06T05:38:27.857754614Z&amp;#34; }, &amp;#34;data&amp;#34;: { &amp;#34;resource_data&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;633e69cce9980815a9c9f2a3&amp;#34;, &amp;#34;message&amp;#34;: &amp;#34;incident reassign&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://app.squadcast.com/incident/633e69cce9980815a9c9f2a3&amp;#34;, &amp;#34;alert_source&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;6077f7225fdc7075e371685f&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;Squadcast UI&amp;#34;, &amp;#34;short_name&amp;#34;: &amp;#34;squadcastui&amp;#34; }, &amp;#34;service&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;62f0fdde613c98528db9f8bc&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Service Test2&amp;#34;, &amp;#34;slug&amp;#34;: &amp;#34;service-test2&amp;#34; }, &amp;#34;status&amp;#34;: &amp;#34;triggered&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2022-10-06T05:38:20.198Z&amp;#34;, &amp;#34;assigned_to&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;61a461cfa06594e09eda4288&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Yash&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;squad&amp;#34;, &amp;#34;assigned_at&amp;#34;: &amp;#34;0001-01-01T00:00:00Z&amp;#34; }, &amp;#34;tags&amp;#34;: null, &amp;#34;event_payload&amp;#34;: { &amp;#34;assignee&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;629e23f5eb4041a20a43b11c&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;escalationpolicy&amp;#34; }, &amp;#34;attachments&amp;#34;: [], &amp;#34;created_by&amp;#34;: &amp;#34;61963608090a650008fff152&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;message&amp;#34;: &amp;#34;incident reassign&amp;#34;, &amp;#34;tags&amp;#34;: { &amp;#34;&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;#0C93E3&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#34; } } }, &amp;#34;timeline&amp;#34;: [ { &amp;#34;action&amp;#34;: &amp;#34;triggered&amp;#34;, &amp;#34;assigned_to&amp;#34;: &amp;#34;escalationpolicy&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;time&amp;#34;: &amp;#34;2022-10-06T05:38:20.</description>
+    </item>
     <item>
       <title>Build Alert Sources</title>
-      <link>https://developers.squadcast.com/build-integrations/alert-sources/</link>
+      <link>http://localhost:1313/build-integrations/alert-sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/build-integrations/alert-sources/</guid>
-      <description>Build Alert SourcesSquadcast supports over 100+ integrations with a range of observability tools in the market today as alert sources.
-Squadcast now offers a platform for its users &amp;amp; partners to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.
-Integrations are built using Webhooks. These integrations can support both triggering and automatic resolution of alerts in Squadcast when the alerts in the observability tool get resolved and send signals via the configured Webhooks.</description>
+      <guid>http://localhost:1313/build-integrations/alert-sources/</guid>
+      <description>Build Alert SourcesSquadcast supports over 100+ integrations with a range of observability tools in the market today as alert sources.&#xA;Squadcast now offers a platform for its users &amp;amp; partners to build their integrations with the tools of their choice and route alerts into the platform via Webhooks.&#xA;Integrations are built using Webhooks. These integrations can support both triggering and automatic resolution of alerts in Squadcast when the alerts in the observability tool get resolved and send signals via the configured Webhooks.</description>
     </item>
-    
     <item>
       <title>Custom scripts</title>
-      <link>https://developers.squadcast.com/scripts/custom-scripts/</link>
+      <link>http://localhost:1313/scripts/custom-scripts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/scripts/custom-scripts/</guid>
-      <description>Custom ScriptsCustom scripts are used to perform certain custom actions in Squadcast with the help of Squadcast API&amp;rsquo;s and webhooks.
-&amp;#8203;​ See who is on-call in Slack The purpose of the script is to get the list of people who are on-call for a given Squadcast Schedule across all the shifts, at the time of execution of the script and send it to a slack channel.
-Script - https://github.com/SquadcastHub/who-s-oncall-slack External link icon Open external link Language - Go</description>
+      <guid>http://localhost:1313/scripts/custom-scripts/</guid>
+      <description>Custom ScriptsCustom scripts are used to perform certain custom actions in Squadcast with the help of Squadcast API&amp;rsquo;s and webhooks.&#xA;&amp;#8203;​ See who is on-call in Slack The purpose of the script is to get the list of people who are on-call for a given Squadcast Schedule across all the shifts, at the time of execution of the script and send it to a slack channel.&#xA;Script - https://github.com/SquadcastHub/who-s-oncall-slack External link icon Open external link Language - Go</description>
     </item>
-    
     <item>
-      <title>Use cases</title>
-      <link>https://developers.squadcast.com/outgoing-webhooks/use-cases/</link>
+      <title>How to use Terraformer?</title>
+      <link>http://localhost:1313/terraform/tutorial/how-to-use-terraformer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/outgoing-webhooks/use-cases/</guid>
-      <description> Use-cases for outgoing WebhooksWebhooks can be leveraged in various scenarios. We have put together some common use-cases.
-Building internal custom dashboards to visualize or analyze incidents Sending data to ticketing tools, such as Zendesk, Freshdesk, Shortcut, Asana, etc. Sending events to communication apps, such as Slack, MS Teams, etc. Alerting when a workflow is disrupted- then use the API to re-run the workflow Triggering internal notification systems to alert people when incidents are created/resolved Building your own automation plug-ins and tools </description>
+      <guid>http://localhost:1313/terraform/tutorial/how-to-use-terraformer/</guid>
+      <description>How to use Terraformer with Squadcast?If you are already using Squadcast via API or the Web UI and would like to generate the Terraform files for your existing Squadcast configuration, you can use our Squadcast implementation of Terraformer External link icon Open external link to do the same.&#xA;&amp;#8203;​ Download Terraformer binaries Download the release using any of the following methods:&#xA;Go to: https://github.com/SquadcastHub/terraformer/releases External link icon Open external link and download the appropriate binary for your OS.</description>
     </item>
-    
-    <item>
-      <title>API documentation</title>
-      <link>https://developers.squadcast.com/api/documentation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/api/documentation/</guid>
-      <description>API documentationGo to apidocs.squadcast.com External link icon Open external link for documentation of all of Squadcast&amp;rsquo;s API endpoints.</description>
-    </item>
-    
-    <item>
-      <title>How to write manifests?</title>
-      <link>https://developers.squadcast.com/build-integrations/manifest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/build-integrations/manifest/</guid>
-      <description>How to write manifests? &amp;#8203;​ Topic of Contents Manifest explained Unwanted/Unused fields kind Fields used only for UI use cases type heading supportDoc displayKeyOnly Fields used for deprecation notices in UI deprecated deprecationMessage Fields actually used by ingester for processing version isNative shortName isValid isBatched arraySelector How does the processing happen? eventIndicator message description isPrivate hideAutomation metadata helperTemplates Best practices for writing message and description templates Incident Message Incident Description Further Reference &amp;#8203;​ Manifest explained Example used : Prometheus External link icon Open external link kind: AlertSource version: v1 isNative: false type: Prometheus shortName: prometheus isValid: true isBatched: true arraySelector: &amp;#34;${$root.</description>
-    </item>
-    
-    <item>
-      <title>Payload format</title>
-      <link>https://developers.squadcast.com/incoming-webhooks/payload-format/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/incoming-webhooks/payload-format/</guid>
-      <description>&amp;#8203;​ Header Ensure that you add a header Content-Type with value application/json while making the HTTP POST request.
-Content-Type:application/json
-&amp;#8203;​ Payload The body of the POST request should contain the details of your incident in the following format:
-{ &amp;#34;message&amp;#34;: &amp;#34;This will be the incident message&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;This will be the incident description&amp;#34;, &amp;#34;tags&amp;#34; : { &amp;#34;tagname1&amp;#34;:&amp;#34;Tag value#1&amp;#34;, &amp;#34;tagname2&amp;#34;:&amp;#34;Tag value#2&amp;#34;, &amp;#34;tagname3&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;Valid HTML HEX Colour Notation goes here&amp;#34;, &amp;#34;value&amp;#34;:&amp;#34;Tag value#3&amp;#34; } }, &amp;#34;status&amp;#34;: &amp;#34;trigger&amp;#34;, &amp;#34;event_id&amp;#34;: &amp;#34;6&amp;#34; } &amp;#8203;​ Mandatory fields within the JSON Kindly note that the message and description fields in the JSON are mandatory to trigger an incident in Squadcast.</description>
-    </item>
-    
-    <item>
-      <title>Use cases</title>
-      <link>https://developers.squadcast.com/incoming-webhooks/use-cases/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/incoming-webhooks/use-cases/</guid>
-      <description>Use-cases for incoming webhooksYou can use our incoming webhooks to do a lot of things, you are only limited by your imagination. Some of the most common use cases are listed below.
-Route alerts from observability tools Route alerts from internal tools Capture issues via a webform from internal or external stakeholders and route it to a service using incoming webhooks. If you use our incoming webhooks for some other use cases, please let us know and we will be happy to update it here.</description>
-    </item>
-    
-    <item>
-      <title>Nodejs conncetor</title>
-      <link>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</guid>
-      <description>Nodejs connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Webhook-Connectors External link icon Open external link The following connectors are currently available:
-&amp;#8203;​ ChatOps Slack External link icon Open external link Use this to notify your Slack channels about Squadcast Incident related updates, supports multiple channels. Alternatively, you can use our Slack extension as well.
-Discord External link icon Open external link Use this to notify your Discord channels about Squadcast Incident related updates, supports multiple channels.</description>
-    </item>
-    
   </channel>
 </rss>
