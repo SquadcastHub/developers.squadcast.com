@@ -2,30 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webhook connectors on Squadcast Developers</title>
-    <link>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/</link>
+    <link>http://localhost:1313/outgoing-webhooks/webhook-connectors/</link>
     <description>Recent content in Webhook connectors on Squadcast Developers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/outgoing-webhooks/webhook-connectors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nodejs conncetor</title>
-      <link>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</link>
+      <link>http://localhost:1313/outgoing-webhooks/webhook-connectors/nodejs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/nodejs/</guid>
-      <description>Nodejs connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Webhook-Connectors External link icon Open external link The following connectors are currently available:
-&amp;#8203;​ ChatOps Slack External link icon Open external link Use this to notify your Slack channels about Squadcast Incident related updates, supports multiple channels. Alternatively, you can use our Slack extension as well.
-Discord External link icon Open external link Use this to notify your Discord channels about Squadcast Incident related updates, supports multiple channels.</description>
+      <guid>http://localhost:1313/outgoing-webhooks/webhook-connectors/nodejs/</guid>
+      <description>Nodejs connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Webhook-Connectors External link icon Open external link The following connectors are currently available:&#xA;&amp;#8203;​ ChatOps Slack External link icon Open external link Use this to notify your Slack channels about Squadcast Incident related updates, supports multiple channels. Alternatively, you can use our Slack extension as well.&#xA;Discord External link icon Open external link Use this to notify your Discord channels about Squadcast Incident related updates, supports multiple channels.</description>
     </item>
-    
     <item>
       <title>Cloudflare worker script</title>
-      <link>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/cloudflare-worker/</link>
+      <link>http://localhost:1313/outgoing-webhooks/webhook-connectors/cloudflare-worker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://developers.squadcast.com/outgoing-webhooks/webhook-connectors/cloudflare-worker/</guid>
-      <description> Cloudflare workers based connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Cloudflare-Webhook-Connectors External link icon Open external link Cloudflare workers help you deploy serverless code instantly across the globe on its edge and we have created a 1-click Deploy with Workers script, which will help you get started quickly.
-&amp;#8203;​ ChatOps Slack Discord Microsoft Teams &amp;#8203;​ Ticketing Trello </description>
+      <guid>http://localhost:1313/outgoing-webhooks/webhook-connectors/cloudflare-worker/</guid>
+      <description> Cloudflare workers based connectorsGitHub - https://github.com/SquadcastHub/Squadcast-Cloudflare-Webhook-Connectors External link icon Open external link Cloudflare workers help you deploy serverless code instantly across the globe on its edge and we have created a 1-click Deploy with Workers script, which will help you get started quickly.&#xA;&amp;#8203;​ ChatOps Slack Discord Microsoft Teams &amp;#8203;​ Ticketing Trello </description>
     </item>
-    
   </channel>
 </rss>

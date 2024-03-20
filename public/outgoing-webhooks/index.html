@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" theme="light" is-docs-page js-focus-visible-polyfill-available>
-  <head><meta charset="utf-8">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <title>Outgoing webhooks</title>
 <meta http-equiv="cleartype" content="on"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -16,19 +16,19 @@
 
 <meta name="description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions." />
 
-<meta property="og:image" content="https://developers.squadcast.com"/>
+<meta property="og:image" content="http://localhost:1313/"/>
 <meta property="og:title" content="Outgoing webhooks"/>
 <meta property="og:description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions."/>
 <meta property="og:type" content="website"/>
 
 <meta name="twitter:title" content="Outgoing webhooks"/>
-<meta name="twitter:image" content="https://developers.squadcast.com"/>
+<meta name="twitter:image" content="http://localhost:1313/"/>
 <meta name="twitter:description" content="Outgoing webhooks (Incident API) can be used to send alert data to external systems and automate certain actions."/>
 <meta name="twitter:creator" content="@SquadcastHub"/>
 <meta name="twitter:card" content="summary_large_image"/>
 
 <link rel="icon" href="/favicon-32x32.png"/>
-<link rel="canonical" href="https://developers.squadcast.com/outgoing-webhooks/"/>
+<link rel="canonical" href="http://localhost:1313/outgoing-webhooks/"/>
 <link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
 
@@ -39,7 +39,56 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
 <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
 <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
-<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/style.css"/><script>(function(){let s=!1,e,n;document.readyState!=="loading"?o():addEventListener("DOMContentLoaded",o),e=document.querySelector("#ThemeToggle"),s=!e;function t(n){try{let o=n?"dark":"light";document.documentElement.setAttribute("theme",o),localStorage.theme=JSON.stringify({theme:o}),e?(e.checked=n,s=!1):s&&setTimeout(t,1,n)}catch{}}function o(){e=e||document.querySelector("#ThemeToggle"),e.addEventListener("change",()=>t(!!e.checked)),addEventListener("keydown",n=>{n.target===document.body&&n.which===68&&n.shiftKey&&(n.preventDefault(),t(!e.checked))})}try{n=window.matchMedia("(prefers-color-scheme:dark)"),n.onchange=e=>t(e.matches)}catch{}try{let e=localStorage.theme,s=e&&JSON.parse(e);t(s?/dark/.test(s.theme):!!(n&&n.matches))}catch{}})()</script><script src="/main.min.1c436fbb7958f74c2a71949573b11ef9.js" defer></script>
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="stylesheet" href="/style.css"/><script>// <stdin>
+(function() {
+  let tooEarly = false;
+  let btn;
+  let media;
+  if (document.readyState !== "loading")
+    init();
+  else
+    addEventListener("DOMContentLoaded", init);
+  btn = document.querySelector("#ThemeToggle");
+  tooEarly = !btn;
+  function setter(isDark) {
+    try {
+      let theme = isDark ? "dark" : "light";
+      document.documentElement.setAttribute("theme", theme);
+      localStorage.theme = JSON.stringify({ theme });
+      if (btn) {
+        btn.checked = isDark;
+        tooEarly = false;
+      } else if (tooEarly) {
+        setTimeout(setter, 1, isDark);
+      }
+    } catch (err) {
+    }
+  }
+  function init() {
+    btn = btn || document.querySelector("#ThemeToggle");
+    btn.addEventListener("change", () => setter(!!btn.checked));
+    addEventListener("keydown", (ev) => {
+      if (ev.target !== document.body)
+        return;
+      if (ev.which === 68 && ev.shiftKey) {
+        ev.preventDefault();
+        setter(!btn.checked);
+      }
+    });
+  }
+  try {
+    media = window.matchMedia("(prefers-color-scheme:dark)");
+    media.onchange = (ev) => setter(ev.matches);
+  } catch (err) {
+  }
+  try {
+    let value = localStorage.theme;
+    let row = value && JSON.parse(value);
+    setter(row ? /dark/.test(row.theme) : !!(media && media.matches));
+  } catch (err) {
+  }
+})();
+</script><script src="/main.js" defer></script>
     <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
     <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
@@ -49,37 +98,26 @@
   <a class="DocsMobileHeader--cloudflare-logo-link Link Link-without-underline" href="/">
     <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
       <div class="DocsNavLogoLockup--logo" style="width: 10%;">
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 261 261" style="enable-background:new 0 0 261 261;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-6_1_) !important;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy-7_1_) !important;}
-</style>
-<g id="Group-Copy">
-	
-		<linearGradient id="Combined-Shape-Copy-6_1_" gradientUnits="userSpaceOnUse" x1="-824.5085" y1="668.3428" x2="-823.9142" y2="669.2931" gradientTransform="matrix(212.3111 0 0 -191.6929 175071.9688 128313.4375)">
-		<stop  offset="0" style="stop-color:#1F92FF !important"/>
-		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
-		<stop  offset="1" style="stop-color:#000395 !important"/>
-	</linearGradient>
-	<path id="Combined-Shape-Copy-6" class="st0" d="M153.2,11.3c4.2,0.7,8.8,1.7,13.7,3c31.7,8.8,64.1,38.8,37.2,32.8
-		c-41.1-12.5-68,12.2-81.4,41.3c-0.4,0.8-0.7,1.5-1.1,2.3c-15.9,44.1-24,119.7-79.7,108.5C-14.5,181.3-0.8,98.9,19.1,68.1
-		c21.4-33.2,46.1-51.5,83.1-57.4C122.6,7.4,139.6,8.4,153.2,11.3L153.2,11.3z"/>
-	
-		<linearGradient id="Combined-Shape-Copy-7_1_" gradientUnits="userSpaceOnUse" x1="-832.4094" y1="672.8011" x2="-831.6409" y2="673.6775" gradientTransform="matrix(-212.3111 0 0 191.6929 -176469.9688 -128886.4375)">
-		<stop  offset="0" style="stop-color:#1F92FF !important"/>
-		<stop  offset="0.202" style="stop-color:#1B7FF1 !important"/>
-		<stop  offset="1" style="stop-color:#000395 !important"/>
-	</linearGradient>
-	<path id="Combined-Shape-Copy-7" class="st1" d="M107.8,249.7c-4.2-0.7-8.8-1.7-13.7-3C62.4,237.9,30,207.9,57,213.9
-		c41.1,12.5,68-12.2,81.4-41.3c0.4-0.8,0.7-1.5,1.1-2.3c15.9-44.1,24-119.7,79.7-108.5c56.4,17.9,42.7,100.3,22.8,131.1
-		c-21.4,33.2-46.1,51.5-83.1,57.4C138.4,253.6,121.4,252.6,107.8,249.7L107.8,249.7z"/>
-</g>
-
+	<svg id="Base" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 200">
+		<defs>
+			<style>
+				.cls-1 {
+					fill: #4ec4cd;
+					fill-rule: evenodd;
+				}
+			</style>
+		</defs>
+		<g id="Group-Copy">
+			<path id="Combined-Shape-Copy-6" class="cls-1"
+				d="M124.61,2.14c3.48,.59,7.2,1.37,11.22,2.5,26.06,7.2,52.61,31.79,30.47,26.89-33.75-10.24-55.8,10.04-66.77,33.9-.29,.64-.59,1.27-.88,1.91-13.08,36.2-19.64,98.22-65.4,89.06C-13.04,141.65-1.82,74.1,14.49,48.77,32.08,21.59,52.31,6.55,82.68,1.7c16.8-2.69,30.71-1.91,41.93,.44h0Z" />
+			<path id="Combined-Shape-Copy-7" class="cls-1"
+				d="M87.39,197.84c-3.48-.59-7.2-1.37-11.22-2.5-26.06-7.2-52.61-31.79-30.47-26.89,33.75,10.24,55.8-10.04,66.77-33.9,.29-.64,.59-1.27,.88-1.91,13.08-36.2,19.64-98.22,65.4-89.06,46.29,14.74,35.07,82.3,18.76,107.62-17.59,27.19-37.82,42.23-68.19,47.08-16.85,2.74-30.76,1.91-41.93-.44h0Z" />
+		</g>
+	</svg>
 </div>
 <span class="DocsNavLogoLockup--text">
-  <span data-text="Squadcast">Squadcast </span>
-  <span data-text="Docs">Docs </span>
+	<span data-text="Squadcast">Squadcast </span>
+	<span data-text="Docs">Docs </span>
 </span>
     </div>
   </a>
@@ -177,13 +215,130 @@
               <span class="DocsSidebar--nav-link-highlight"></span>
               <span class="DocsSidebar--nav-link-text">Overview</span>
             </a>
-          </li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload-format/">
-      <span class="DocsSidebar--nav-link-highlight"></span>
-      <span class="DocsSidebar--nav-link-text">Payload format</span>
-    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/use-cases/">
+          </li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/use-cases/">
       <span class="DocsSidebar--nav-link-highlight"></span>
       <span class="DocsSidebar--nav-link-text">Use cases</span>
     </a></li><li class="DocsSidebar--nav-item"><button class="Button DocsSidebar--nav-expand-collapse-button">
+      <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+      <span is-visually-hidden>Expand: Payloads</span>
+    </button><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Payloads</span>
+    </a><div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px;"><div class="DocsSidebar--nav-item-collapse-wrapper">
+          <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+            <div class="DocsSidebar--nav-item-collapse-content">
+              <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1"><li class="DocsSidebar--nav-item"><button class="Button DocsSidebar--nav-expand-collapse-button" tabindex="-1">
+      <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+      <span is-visually-hidden>Expand: v1</span>
+    </button><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v1/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">v1</span>
+    </a><div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px;"><div class="DocsSidebar--nav-item-collapse-wrapper">
+          <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+            <div class="DocsSidebar--nav-item-collapse-content">
+              <ul class="DocsSidebar--nav-subnav" depth="2" style="--depth:2"><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v1/incident-triggered/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Triggered</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v1/incident-reassigned/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Reassigned</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v1/incident-acknowledged/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Acknowledged</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v1/incident-resolved/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Resolved</span>
+    </a></li></ul>
+            </div>
+          </div>
+        </div>
+      </div></li><li class="DocsSidebar--nav-item"><button class="Button DocsSidebar--nav-expand-collapse-button" tabindex="-1">
+      <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+      <span is-visually-hidden>Expand: v2</span>
+    </button><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">v2</span>
+    </a><div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px;"><div class="DocsSidebar--nav-item-collapse-wrapper">
+          <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+            <div class="DocsSidebar--nav-item-collapse-content">
+              <ul class="DocsSidebar--nav-subnav" depth="2" style="--depth:2"><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-triggered/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Triggered</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-reassigned/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Reassigned</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-acknowledged/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Acknowledged</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-resolved/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Resolved</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/slo-violating-incident/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">SLO Violating Incident</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/slo-violation-false-positive/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">SLO Violation False Positive</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/slo-violation-unmark-false-positive/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">SLO Violation Unmark False Positive</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/slo-violating-incident-update-error-budget/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">SLO Violating Incident Error budget update</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-notes-created/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Notes Created</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-notes-updated/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Notes Updated</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-notes-deleted/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Notes Deleted</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-note-starred/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Note Starred</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-note-unstarred/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Note Unstarred</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-tags-updated/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Tags Updated</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-task-created/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Task Created</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-task-updated/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Task Updated</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-task-deleted/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Task Deleted</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-task-completed/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Task Completed</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-task-uncompleted/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Task Unompleted</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-communication-channel-created/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Communication Channel Created</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-communication-channel-updated/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Communication Channel Updated</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/incident-communication-channel-deleted/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Incident Communication Channel Deleted</span>
+    </a></li><li class="DocsSidebar--nav-item"><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/payload/v2/statuspage-updated/" tabindex="-1">
+      <span class="DocsSidebar--nav-link-highlight"></span>
+      <span class="DocsSidebar--nav-link-text">Statuspage Updated</span>
+    </a></li></ul>
+            </div>
+          </div>
+        </div>
+      </div></li></ul>
+            </div>
+          </div>
+        </div>
+      </div></li><li class="DocsSidebar--nav-item"><button class="Button DocsSidebar--nav-expand-collapse-button">
       <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
       <span is-visually-hidden>Expand: Webhook connectors</span>
     </button><a class="DocsSidebar--nav-link" href="/outgoing-webhooks/webhook-connectors/">
@@ -301,12 +456,11 @@
       <a class="DocsMarkdown--header-anchor Link Link-without-underline" href="#supported-events" aria-hidden="true">&#8203;​</a>
     </span>
     <span>Supported Events</span>
-  </h2><p>The webhook that you have configured can be triggered for certain events occurring in Squadcast. At the moment, the following incident-related events are supported:</p>
-<p>Incident triggered
-Incident reassigned
-Incident acknowledged
-Incident resolved</p>
+  </h2><p>The webhook that you have configured can be triggered for certain events occurring in Squadcast.</p>
 <p>You can choose multiple triggers for a webhook. Information is sent to the provided URLs if any of the triggers match.</p>
+<p>In the legacy version v1, only limited events are supported whereas the latest version v2, supports an exhaustive list of events.</p>
+<p>For <strong>v1 events</strong>, <a href=./payload/v1/ class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">refer here</span></a>.</p>
+<p>For <strong>v2 events</strong>, <a href=./payload/v2/ class="DocsMarkdown--link"><span class="DocsMarkdown--link-content">refer here</span></a>.</p>
 <p>If your use-case requires more Squadcast events to be supported, please reach out to our Support team with details of the same.</p>
 <h2 id="communication-protocol-for-webhooks">
     <span class="DocsMarkdown--header-anchor-positioner">
@@ -366,9 +520,9 @@ Incident resolved</p>
       <span class="DocsFooter--content-time">
         Updated <time
   class="relative"
-  datetime=2022-06-28T14:08:39&#43;05:30
-  title=2022-06-28
->June 28, 2022</time>
+  datetime=2022-10-08T11:16:30&#43;05:30
+  title=2022-10-08
+>October 8, 2022</time>
       </span>
     </div>
   </div>
