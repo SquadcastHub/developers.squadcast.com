@@ -23,19 +23,19 @@ Run the following command:
 ### MacOS
 
 ```sh
-curl -LO https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-all-darwin-amd64
+curl -LO "https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-squadcast-darwin-arm64"
 ```
 
 ### Linux
 
 ```sh
-curl -LO https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-all-linux-amd64
+curl -LO "https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-squadcast-linux-amd64"
 ```
 
 ### Windows
 
 ```sh
-curl -LO https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-all-windows-amd64
+curl -LO "https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s https://api.github.com/repos/SquadcastHub/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-squadcast-windows-amd64.exe"
 ```
 
 ## Configure the binaries
@@ -43,13 +43,17 @@ curl -LO https://github.com/SquadcastHub/terraformer/releases/download/$(curl -s
 Make the binary executable:
 
 ```sh
-chmod +x terraformer-all-<your_os>-<arch>
+chmod +x terraformer-squadcast-darwin-arm64
+```
+OR
+```sh
+chmod +x terraformer-squadcast-linux-amd64
 ```
 
 Add to /usr/local/bin
 
 ```sh
-sudo mv terraformer-all-<your_os>-<arch> /usr/local/bin/terraformer
+sudo mv terraformer-squadcast-<your_os>-<arch> /usr/local/bin/terraformer
 ```
 
 ## Setup Terraform
@@ -61,7 +65,7 @@ terraform {
   required_providers {
     squadcast = {
       source = "SquadcastHub/squadcast"
-      version = "1.0.5"
+      version = "2.1.2"
     }
   }
 }
@@ -98,7 +102,7 @@ terraform state replace-provider -auto-approve "registry.terraform.io/-/squadcas
 
 ## Use Generated files with Terraform
 
-Update generated files  as per your requirement and apply the changes using following commands
+Update generated files  as per your requirement and apply the changes using the following commands
 
 ```tf
 terraform init
